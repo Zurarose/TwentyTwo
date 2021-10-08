@@ -1,0 +1,4 @@
+django~=2.2
+gunicorn
+django-heroku
+psycopg2==2.8.6
