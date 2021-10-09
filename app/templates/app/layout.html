@@ -11,38 +11,87 @@
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
     <style>
+        #loading {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.9;
+            background-color: #fff6e5;
+            z-index: 99;
+        }
         a {
             cursor: pointer;
             text-decoration: none;
             color:inherit;
           }
         a:hover {
-            cursor: pointer;
-            text-decoration: none;
-            color:rgb(2, 68, 58);
-          }
+            color:rgb(209, 195, 180);
+         }
         .material-icons.md-18 { font-size: 18px; }
         .material-icons.md-24 { font-size: 24px; }
         .material-icons.md-36 { font-size: 36px; }
         .material-icons.md-48 { font-size: 48px; }
         .material-icons.md-60 { font-size: 60px; }
         .material-icons.md-72 { font-size: 72px; }
-        
+        body {
+            
+        }
+        .info {
+            border-color: rgb(242, 99, 66) !important;
+        }
+        .nav-link{
+            background-color:black !important;
+        }
+        .green-bg {
+            background-color:rgb(2, 68, 58) !important;
+        }
+        .green-tx {
+
+        }
+        .yellow-bg {
+            background-color:rgb(209, 195, 180) !important;
+        }
+        .yellow-tx {
+
+        }
+        .orange-bg {
+            background-color:rgb(242, 99, 66) !important;
+        }
+        .orange-tx {
+
+        }
+        .border-green {
+            border-color:rgb(2, 68, 58) !important;
+        }
+        .border-yellow {
+            border-color:rgb(209, 195, 180) !important;
+        }
+        .border-orange {
+            border-color:rgb(242, 99, 66) !important;
+        }
+        .white-tx {
+            color:white;
+        }
     </style>
 </head>
 
 <body class="p-0" >
     <nav class="p-0 sticky-top bg-white" >
         <div class="container-fluid p-0">
-        <div class="row  shadow-sm m-0 p-0"  style="background-color:rgb(242, 99, 66); color:white; border-color: rgb(209, 195, 180) !important;">
-            <div class="d-flex justify-content-center col-2 p-0  border-end">
-                <a style="cursor:pointer" href="{% url 'home' %}"><img style="width: 165px;" src="{% static 'app/img/cmprsd/22_logo_small.png' %}" class="img-fluid" alt="..."></a>
+        <div class="row shadow-sm m-0 p-0">
+            <div class="orange-bg border-yellow d-flex justify-content-center col-2 p-0 border-end">
+                <a href="{% url 'home' %}"><img style="width: 165px;" src="{% static 'app/img/cmprsd/22_logo_white.png' %}" class="img-fluid" alt="..."></a>
             </div>
 
-            <div class="col-9  border-end p-0">
-                <div class="col-12 p-0 align-items-center d-flex justify-content-center border-bottom" style="height: 50%;">
+            <div class="col-9 border-end p-0 green-bg white-tx border-yellow">
+                <div class="col-12 p-0 align-items-center d-flex justify-content-center border-bottom border-yellow" style="height: 50%;">
                     <span class="col-11 align-items-center d-flex justify-content-center" style="height:100%;"><p class="m-0 h5 text-center">ЖИЛСТРОЙ-2</p></span>
-                    <span class="col-1 align-items-center d-flex justify-content-center  border-start" style="height:100%;">UA</span>
+                    <span class="col-1 align-items-center d-flex justify-content-center  border-start border-yellow" style="height:100%;">UA</span>
                 </div>
                 <div class="col-12 p-0 align-items-center d-flex justify-content-center" style="height: 50%;">
                     <span class="col-11 align-items-center d-flex justify-content-center" style="height:100%;">
@@ -50,17 +99,16 @@
                         <a class="mx-5" href="">Планировка</a>
                         <a class="mx-5" href="">Обратная связь</a>
                         <a class="mx-5" href="">Расположение</a>
-
                     </span>
-                    <span class="col-1 align-items-center d-flex justify-content-center  border-start" style="height:100%;">RU</span>
+                    <span class="col-1 align-items-center d-flex justify-content-center border-start border-yellow" style="height:100%;">RU</span>
                 </div>               
             </div>
 
-            <div class="col-1 p-0" >
-                <a class="col-12 align-items-center d-flex justify-content-center" style="height:100%; " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <div class="col-1 p-0 orange-bg white-tx">
+                <a class="col-12 align-items-center d-flex justify-content-center" style="height:100%;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <span class="material-icons md-60">dehaze</span>
                 </a>                
-                <div class="offcanvas offcanvas-end" style="width:300px;" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas offcanvas-end" style="width:15%;" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                   <div class="offcanvas-header">
                     <h5 id="offcanvasRightLabel">Offcanvas right</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"> </button>
