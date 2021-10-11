@@ -1,7 +1,6 @@
 {% extends "app/layout.html" %}
 {% load static %}   
 {% block content %}
-
 <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -9,13 +8,13 @@
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="2500">
+    <div class="carousel-item active" data-bs-interval="3500">
       <img src="{% static 'app/img/not_cmprsd/1.jpg' %}" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item" data-bs-interval="2500">
+    <div class="carousel-item" data-bs-interval="3500">
       <img src="{% static 'app/img/not_cmprsd/2.jpg' %}" class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item" data-bs-interval="2500">
+    <div class="carousel-item" data-bs-interval="3500">
       <img src="{% static 'app/img/not_cmprsd/visual_1.jpg' %}" class="d-block w-100" alt="...">
     </div>
   </div>
@@ -29,25 +28,28 @@
   </button>
 </div>
 
-<div class="container mt-4 d-flex justify-content-center">
+
+<div class="col-12 d-flex justify-content-center mt-5">
+    <div class="col-10 yellow-bg p-2 green-tx"><p class="h2 text-center">Про комплекс</p></div>
+</div>
+<div class="d-flex justify-content-center">
     <div class="row col-10">
-        <p class="h2 text-center">Про комплекс</p>
-        <div class="d-flex align-items-start">
-          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <button class="my-3 px-2 pt-2 pb-1 nav-link active" id="v-pills-apartment-tab" data-bs-toggle="pill" data-bs-target="#v-pills-apartment" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                <span class="material-icons md-60">apartment</span><p>Инфоструктура</p>
+        <div class="d-flex align-items-start ms-2 border-green yellow-bg p-0 rounded-bottom rounded-3">
+          <div class="nav flex-column nav-pills yellow-bg" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="mb-2 px-2 pt-2 pb-1 nav-link active green-tx border border-yellow rounded-0" id="v-pills-apartment-tab" data-bs-toggle="pill" data-bs-target="#v-pills-apartment" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                <span class="material-icons md-52">apartment</span><p>Инфоструктура</p>
             </button>
-            <button class="my-3 px-2 pt-2 pb-1 nav-link" id="v-pills-architecture-tab" data-bs-toggle="pill" data-bs-target="#v-pills-architecture" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-                <span class="material-icons md-60">architecture </span><p>Архитектура</p>
+            <button class="my-2 px-2 pt-2 pb-1 nav-link green-tx border border-yellow rounded-0" id="v-pills-architecture-tab" data-bs-toggle="pill" data-bs-target="#v-pills-architecture" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                <span class="material-icons md-52">architecture </span><p>Архитектура</p>
               </button>
-            <button class="my-3 px-2 pt-2 pb-1 nav-link" id="v-pills-nature-tab" data-bs-toggle="pill" data-bs-target="#v-pills-nature" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-                <span class="material-icons md-60">nature_people</span><p>Двор</p>
+            <button class="my-2 px-2 pt-2 pb-1 nav-link green-tx border border-yellow rounded-0" id="v-pills-nature-tab" data-bs-toggle="pill" data-bs-target="#v-pills-nature" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                <span class="material-icons md-52">nature_people</span><p>Двор</p>
             </button>
-            <button class="my-3 px-2 pt-2 pb-1 nav-link" id="v-pills-room-tab" data-bs-toggle="pill" data-bs-target="#v-pills-room" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
-                <span class="material-icons md-60">meeting_room</span><p>Внутри дома</p>
+            <button class="mt-2 px-2 pt-2 pb-1 nav-link green-tx border border-yellow rounded-0" id="v-pills-room-tab" data-bs-toggle="pill" data-bs-target="#v-pills-room" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                <span class="material-icons md-52">meeting_room</span><p>Внутри дома</p>
             </button>
           </div>
-          <div class="tab-content border-dark border-start px-5" style="margin-left:5%; margin-top:7%; height:75%" id="v-pills-tabContent">
+          <div class="tab-content border-dark border-start px-5 border-green green-tx" style="margin-left:5%; margin-top:5%; height:75%" id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="v-pills-apartment" role="tabpanel" aria-labelledby="v-pills-home-tab"><p align="justify">“Twenty two” – это многофункциональный комплекс. Все, что нужно жильцам дома, уже собрано в едином 
               пространстве под одной крышей. Первые этажи комплекса запроектированы под торговый центр – супермаркет, любимые кофейни и салоны красоты, игровые пространства для детей – все расположено здесь. 
               Торговый центр сменяют несколько этажей офисных помещений – в комплексе можно не только комфортно жить, отдыхать и делать покупки, но и продуктивно работать.<br /><br />
@@ -69,78 +71,88 @@
         </div>
     </div>
 </div>
-        <div>
-            <div class="info d-flex justify-content-center border-top  col-12 m-0">
-                <div class="col-8 row">
-                    <div class="info col-5 p-0 border-start">
-                        <p class="h2 text-center">Планировочные решения</p>
-                        <p align="justify" class="p-4">
-                            Квартиры в комплексе запроектированы с седьмого по двадцать второй этажи. Ни на одном из этажей нет типовых решений. Потому чтобы выбрать свою идеальную квартиру, мы рекомендуем просмотреть планы всех этажей. 
-                            Просторные или наоборот небольшие квартиры с террасами, двухуровневые квартиры с лучшими видами, для большой семьи, для пары или для холостяка – в МФК “Twenty two” каждый найдет для себя идеальный вариант.
-                        </p>
-                    </div>
-                    <div class="col-7 p-0">
-                        <img src="{% static 'app/img/cmprsd/visual_3-min.jpg' %}" class="img-fluid" alt="...">
-                    </div>
-                </div>
-            </div>
-
-            <div class="info d-flex justify-content-center border-bottom col-12 m-0">
-                <div class="col-8 row">
-                    <div class="col-7 p-0">
-                        <img src="{% static 'app/img/cmprsd/visual_2-min.jpg' %}" class="img-fluid" alt="...">
-                    </div>
-                    <div class="info col-5 p-0 border-end">
-                        <ul class="list-group">
-                          <li class="list-group-item">An item</li>
-                          <li class="list-group-item">A second item</li>
-                          <li class="list-group-item">A third item</li>
-                          <li class="list-group-item">A fourth item</li>
-                          <li class="list-group-item">And a fifth one</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<div>
+ <div class="col-12 d-flex justify-content-center">
+    <div class="col-8 d-flex flex-wrap m-5 ">
+        <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-end border-bottom p-3"><div class="d-flex justify-content-center material-icons md-60 col-6">near_me</div>
+            <div class="col-6 d-flex align-items-center pb-2">Центральный <br /> район</div>
         </div>
+        <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-end border-bottom p-3"><div class="d-flex justify-content-center material-icons md-60 col-6">business_center</div>
+            <div class="col-6 d-flex align-items-center pb-2">Бизнес <br /> класс</div>
+        </div>
+        <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-bottom p-3"><div class="d-flex justify-content-center material-icons md-60 col-6">gpp_good</div>
+            <div class="col-6 d-flex align-items-center">Круглосуточная охрана и видеонаблюдения</div>
+        </div>
+        <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-end p-3"><div class="d-flex justify-content-center material-icons md-60 col-6">foundation</div>
+            <div class="col-6 d-flex align-items-center ">Монолитный <br />  железобетонный каркас</div>
+        </div>
+        <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-end p-3"><div class="d-flex justify-content-center material-icons md-60 col-6">view_compact</div>
+            <div class="col-6 d-flex align-items-center pb-2">Утеплённые: <br /> стены из газоблока</div>
+        </div>
+        <div class="col-4 d-flex justify-content-center green-tx p-3"><div class="d-flex justify-content-center material-icons md-60 col-6">local_parking</div>
+            <div class="col-6 d-flex align-items-center pb-2">Подземная парковка <br />на 296 мест</div>
+        </div>
+    </div>
+</div>
 
-        <div class="p-0 d-flex justify-content-center">          
-            <div class="border-start border-end col-8 p-0">
-                 <iframe id="frame" style="width:100%; height:650px" src="https://chessgrid.developerit.systems/public/developers/5ecd1c2590de761738c029a3/apartmentComplex/6151c5e35f333e539505f646/layout/61593eeb5f333e5395b45dea?authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiI3Zjc4MGIzYy1iYzgwLTQ1YWMtOTkxMS01YjYyMjlkMTg5NzUiLCJpYXQiOjE2MzMzNTA4NzksImV4cCI6MTc5MTEzODg3OX0.4GXbFFq8RxxxogLwV4gYpzo2V4wS1kUGxj5PztQ_fpE" width="468" height="60" align="left">
-                 Ваш браузер не поддерживает плавающие фреймы!
-                </iframe>
+<div class="col-12 d-flex justify-content-center">
+    <div class="col-10 green-bg p-2 yellow-tx border-bottom border-yellow"><p class="h2 text-center">Планировочные решения</p></div>
+</div>
+    <div class="d-flex justify-content-center col-12 m-0">
+        <div class="col-10 row">
+            <div class="col-5 p-0 border-start green-bg yellow-tx" >
+                <p align="justify" class="p-4">
+                    Квартиры в комплексе запроектированы с седьмого по двадцать второй этажи. Ни на одном из этажей нет типовых решений. Потому чтобы выбрать свою идеальную квартиру, мы рекомендуем просмотреть планы всех этажей. 
+                    Просторные или наоборот небольшие квартиры с террасами, двухуровневые квартиры с лучшими видами, для большой семьи, для пары или для холостяка – в МФК “Twenty two” каждый найдет для себя идеальный вариант.
+                </p>
+            </div>
+            <div class="col-7 p-0">
+                <img src="{% static 'app/img/cmprsd/visual_2-min.jpg' %}" class="img-fluid" alt="...">
             </div>
         </div>
-        <div class="mt-4 d-flex justify-content-center">
-        <div class="col-8">
-            <p class="h2 text-center">Подобрать квартиру</p>
-            <div class="row border border-dark">
-                <div class="col-2 border-end border-dark">
-                    фото
-                </div>
-                <div class="col-9 m-2">
-                    <p align="justify">Оставьте свои данные. Наш менеджер позвонит и поможет подобрать квартиры под ваш запрос, а также предоставит консультацию по любым вашим вопросам</p>
-                    <div class="row">
-                        <div class="mb-2 col-4">
-                            <label for="exampleFormControlInput1" class="form-label my-1">Имя</label>
-                            <input type="text" class="form-control py-2" id="exampleFormControlInput1" placeholder="Имя">
-
-                            <label for="exampleFormControlInput2" class="form-label my-1">Почта</label>
-                            <input type="email" class="form-control py-2" id="exampleFormControlInput2" placeholder="name@example.com">
-
-                            <label for="exampleFormControlInput3" class="form-label my-1">Номер телефона</label>
-                            <input type="text" class="form-control py-2" id="exampleFormControlInput3" placeholder="+380935152040">
-                        </div>
-                        <div class="mb-2 col-8 " >
-                            <label for="exampleFormControlTextarea1" class="form-label">Вопросы и комментарии</label>
-                            <textarea class="form-control m-0" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>            
-        </div>
-        </div>
-        <div class="mt-4">
     </div> 
+</div>
+
+<div class="p-0 d-flex justify-content-center mt-5">          
+    <div class="border-start border-end border-yellow col-10 p-0 green-bg">
+            <iframe id="frame" style="width:100%; height:650px" 
+                    src="https://chessgrid.developerit.systems/public/developers/5ecd1c2590de761738c029a3/apartmentComplex/6151c5e35f333e539505f646/layout/61593eeb5f333e5395b45dea?authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiI3Zjc4MGIzYy1iYzgwLTQ1YWMtOTkxMS01YjYyMjlkMTg5NzUiLCJpYXQiOjE2MzMzNTA4NzksImV4cCI6MTc5MTEzODg3OX0.4GXbFFq8RxxxogLwV4gYpzo2V4wS1kUGxj5PztQ_fpE" >
+            </iframe>
+    </div>
+</div>
+<div class="col-12 d-flex justify-content-center">
+    <div class="col-10 orange-bg p-2 green-tx"><p class="h2 text-center">Подобрать квартиру</p></div>
+</div>
+<div class="col-12 d-flex justify-content-center">
+    <div class="col-10 green-bg row">
+        <div class="">
+            <div class="col-2 border-end border-dark yellow-bg">
+                фото
+            </div>
+            <div class="col-9 m-2 yellow-tx">
+                <p align="justify">Оставьте свои данные. Наш менеджер позвонит и поможет подобрать квартиры под ваш запрос, а также предоставит консультацию по любым вашим вопросам</p>
+                <div class="row">
+                    <div class="mb-2 col-4">
+                        <label for="exampleFormControlInput1" class="form-label my-1">Имя</label>
+                        <input type="text" class="form-control py-2" id="exampleFormControlInput1" placeholder="Имя">
+
+                        <label for="exampleFormControlInput2" class="form-label my-1">Почта</label>
+                        <input type="email" class="form-control py-2" id="exampleFormControlInput2" placeholder="name@example.com">
+
+                        <label for="exampleFormControlInput3" class="form-label my-1">Номер телефона</label>
+                        <input type="text" class="form-control py-2" id="exampleFormControlInput3" placeholder="+380935152040">
+                    </div>
+                    <div class="mb-2 col-8 " >
+                        <label for="exampleFormControlTextarea1" class="form-label">Вопросы и комментарии</label>
+                        <textarea class="form-control m-0" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>           
+    </div>
+</div>
+<div class="mt-4">
+</div> 
 
 
 {% endblock %}

@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     #myapp
     'app',
 ]
-
 # Middleware framework
 # https://docs.djangoproject.com/en/2.1/topics/http/middleware/
 MIDDLEWARE = [
@@ -115,3 +114,5 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
