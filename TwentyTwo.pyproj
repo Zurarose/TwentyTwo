@@ -1792,6 +1792,7 @@
     <Content Include="app\static\app\img\not_cmprsd\visual_3.jpg" />
     <Content Include="app\static\app\img\sup_items\bg.png" />
     <Content Include="app\static\app\img\sup_items\menu.svg" />
+    <Content Include="app\static\app\img\sup_items\visual_4.jpg" />
     <Content Include="app\static\app\scripts\jquery-3.6.0.js" />
     <Content Include="Procfile" />
     <Content Include="requirements.txt" />

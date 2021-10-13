@@ -27,12 +27,12 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<span id="about_compelx"></span>
+
 <div class="col-12 d-flex justify-content-center mt-5">
-    <div  class="col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Про комплекс</p></div>
+    <div id="about_compelx" class="col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Про комплекс</p></div>
 </div>
 <div class="d-flex justify-content-center" >
-    <div class="row col-9 border-1 border-start border-bottom border-green p-4 shadow">
+    <div class="row col-9 border-1 border-bottom border-green p-4 shadow">
         <div class="d-flex align-items-start p-0">
           <div class="nav flex-column nav-pills yellow-bg" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <button class="shadow mb-2 px-2 pt-2 pb-1 nav-link active green-tx border border-yellow rounded-3" id="v-pills-apartment-tab" data-bs-toggle="pill" data-bs-target="#v-pills-apartment" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
@@ -101,10 +101,10 @@
 <div class="col-12 d-flex justify-content-center">
     <div class="col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Планировочные решения</p></div>
 </div>
-    <div class="d-flex justify-content-center col-12 m-0">
+    <div class="d-flex green-bg shadow-lg justify-content-center col-12 m-0">
         <div class="col-9 row">
-            <div class="col-5 p-0 yellow-bg green-tx" >
-                <p align="justify" class="pe-4">
+            <div class="col-5 p-0 yellow-tx" >
+                <p align="justify" class="pe-4 pt-5">
                     Квартиры в комплексе запроектированы с седьмого по двадцать второй этажи. Ни на одном из этажей нет типовых решений. Потому чтобы выбрать свою идеальную квартиру, мы рекомендуем просмотреть планы всех этажей. 
                     Просторные или наоборот небольшие квартиры с террасами, двухуровневые квартиры с лучшими видами, для большой семьи, для пары или для холостяка – в МФК “Twenty two” каждый найдет для себя идеальный вариант.
                 </p>
@@ -123,36 +123,29 @@
             </iframe>
     </div> 
 </div>-->
-<div class="col-12 d-flex justify-content-center">
+<div class="mt-5 col-12 d-flex justify-content-center">
     <div class="col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Подобрать квартиру</p></div>
 </div>
-<div class="col-12 d-flex justify-content-center">
-    <div class="col-10 row">
-        <div class="">           
-            <div class="col-9 m-2 green-tx">
-                <p align="justify">Оставьте свои данные. Наш менеджер позвонит и поможет подобрать квартиры под ваш запрос, а также предоставит консультацию по любым вашим вопросам</p>
-                <div class="row">
-                    <div class="mb-2 col-4">
-                        <label for="exampleFormControlInput1" class="form-label my-1">Имя</label>
-                        <input type="text" class="form-control py-2" id="exampleFormControlInput1" placeholder="Имя">
-
-                        <label for="exampleFormControlInput2" class="form-label my-1">Почта</label>
-                        <input type="email" class="form-control py-2" id="exampleFormControlInput2" placeholder="name@example.com">
-
-                        <label for="exampleFormControlInput3" class="form-label my-1">Номер телефона</label>
-                        <input type="text" class="form-control py-2" id="exampleFormControlInput3" placeholder="+380935152040">
-                    </div>
-                    <div class="mb-2 col-8 " >
-                        <label for="exampleFormControlTextarea1" class="form-label">Вопросы и комментарии</label>
-                        <textarea class="form-control m-0" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
+<div class="col-12 d-flex justify-content-center">    
+    <div class="col-9 m-2 green-tx ">
+        <p class="d-flex justify-content-center" align="justify">Оставьте свои данные. Наш менеджер позвонит и поможет подобрать квартиры под ваш запрос</p>
+            <div class="mb-2 col-12 d-flex flex-row col-4 justify-content-center">
+                <div class="col-3">
+                    <label for="exampleFormControlInput1" class="form-label my-1">Имя</label>
+                    <input type="text" class="form-control py-2" id="exampleFormControlInput1" placeholder="Имя">
+                </div>
+                <div class="col-3">
+                    <label for="exampleFormControlInput2" class="form-label my-1">Почта</label>
+                    <input type="email" class="form-control py-2" id="exampleFormControlInput2" placeholder="name@example.com">
+                </div>
+                <div class="col-3">
+                    <label for="exampleFormControlInput3" class="form-label my-1">Номер телефона</label>
+                    <input type="text" class="form-control py-2" id="exampleFormControlInput3" placeholder="+380935152040">
                 </div>
             </div>
-        </div>           
     </div>
 </div>
-<div class="mt-4">
-</div> 
+
 
 
 {% endblock %}
