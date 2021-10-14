@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
 
-    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
 
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
     <style>
@@ -115,7 +115,7 @@
             font-family: 'Montserrat', sans-serif;
             background-image: url('../static/app/img/sup_items/visual_4.jpg');
             background-repeat: no-repeat;
-            background-size: 100% 70%;
+            background-size: 100% 100%;
         }
 
         .green-bg {
@@ -237,7 +237,7 @@
             {% block content %}
             {% endblock %}
     </div>
-    <footer class="green-bg mt-5" style="height:70px">
+    <footer class="green-bg" style="height:100px">
         
     </footer>
 
