@@ -1,134 +1,148 @@
 {% extends "app/layout.html" %}
-{% load static %}   
+{% load static %}
 {% block content %}
-<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="3500">
-      <img src="{% static 'app/img/not_cmprsd/1.jpg' %}" class="d-block w-100" alt="...">
+<div id="carouselExampleIndicators" class="shadow-sm carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-item" data-bs-interval="3500">
-      <img src="{% static 'app/img/not_cmprsd/2.jpg' %}" class="d-block w-100" alt="...">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3500">
+            <img src="{% static 'app/img/not_cmprsd/1.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3500">
+            <img src="{% static 'app/img/not_cmprsd/2.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3500">
+            <img src="{% static 'app/img/not_cmprsd/visual_1.jpg' %}" class="d-block w-100" alt="...">
+        </div>
     </div>
-    <div class="carousel-item" data-bs-interval="3500">
-      <img src="{% static 'app/img/not_cmprsd/visual_1.jpg' %}" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
 
-<div class="col-12 d-flex justify-content-center mt-5">
-    <div id="about_compelx" class="col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Про комплекс</p></div>
-</div>
-<div class="d-flex justify-content-center" >
-    <div class="row col-9 border-1 border-bottom border-green p-4 shadow">
-        <div class="d-flex align-items-start p-0">
-          <div class="nav flex-column nav-pills yellow-bg" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <button class="shadow mb-2 px-2 pt-2 pb-1 nav-link active green-tx border border-yellow rounded-3" id="v-pills-apartment-tab" data-bs-toggle="pill" data-bs-target="#v-pills-apartment" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                <span class="material-icons md-52">apartment</span><p>Инфоструктура</p>
-            </button>
-            <button class="shadow my-2 px-2 pt-2 pb-1 nav-link green-tx border border-yellow rounded-3" id="v-pills-architecture-tab" data-bs-toggle="pill" data-bs-target="#v-pills-architecture" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-                <span class="material-icons md-52">architecture </span><p>Архитектура</p>
-              </button>
-            <button class="shadow my-2 px-2 pt-2 pb-1 nav-link green-tx border border-yellow rounded-3" id="v-pills-nature-tab" data-bs-toggle="pill" data-bs-target="#v-pills-nature" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-                <span class="material-icons md-52">nature_people</span><p>Двор</p>
-            </button>
-            <button class="shadow mt-2 px-2 pt-2 pb-1 nav-link green-tx border border-yellow rounded-3" id="v-pills-room-tab" data-bs-toggle="pill" data-bs-target="#v-pills-room" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
-                <span class="material-icons md-52">meeting_room</span><p>Внутри дома</p>
-            </button>
-          </div>
-          <div class="tab-content border-start border-green green-tx px-5" style="margin-left:5%; margin-top:5%; height:75%" id="v-pills-tabContent">
-            <div class="tab-pane fade show active" style="height:100%"  id="v-pills-apartment" role="tabpanel" aria-labelledby="v-pills-home-tab"><p style="height:100%"  align="justify">“Twenty two” – это многофункциональный комплекс. Все, что нужно жильцам дома, уже собрано в едином 
-              пространстве под одной крышей. Первые этажи комплекса запроектированы под торговый центр – супермаркет, любимые кофейни и салоны красоты, игровые пространства для детей – все расположено здесь. 
-              Торговый центр сменяют несколько этажей офисных помещений – в комплексе можно не только комфортно жить, отдыхать и делать покупки, но и продуктивно работать.<br /><br />
-              “Twenty two” расположен на пересечении проспекта Гагарина и улицы Молочной. Он равноудален от двух станций метро “Проспект Гагарина” и “Спортивная”, расстояние до обеих – 
-              900 м, а это всего 10 минут пешком. В пешей доступности от комплекса школы, детские сады, Конный рынок, супермаркеты, тренажерные залы и салоны красоты.<br /><br />
-              Комплекс находится на одной из главных транспортных артерий города, и в этом одно из главных преимуществ его расположения. До центра Харькова на авто можно доехать за 5 минут, до железнодорожного вокзала – 
-              за 10, а путь в аэропорт займет не больше 15 минут.</p>
-              </div>
-            <div class="tab-pane fade"  style="height:100%" id="v-pills-architecture" role="tabpanel" aria-labelledby="v-pills-profile-tab"><p style="height:100%" align="justify">Комплекс выполнен в архитектурном стиле конструктивизм. Архитекторы отказались от ультрамодных форм и отдали 
-              предпочтение спокойным масштабным решениям. Две башни, объединенные едиными коммерческими помещениями, и двадцать два этажа высоты делают комплекс монументальным. МФК “Twenty two” минималистичный и визуально 
-              целостный, масштабный и сдержанный. Террасы на верхних этажах – интересные детали, которые заставляют рассматривать комплекс. Дополнило идею фасадное решение. В комплексе будет использован вентилируемый навесной фасад. 
-              Этажи с торговыми и офисными помещениями будут выделены акцентным фасадным решением.</p>
-              </div>
-            <div class="tab-pane fade" style="height:100%"  id="v-pills-nature" role="tabpanel" aria-labelledby="v-pills-messages-tab"><p style="height:100%"  align="justify">Двор комплекса будет просторным и огороженным от посторонних глаз. 
-                Во дворе расположатся детские площадки для детей разного возраста, спортивные площадки, места для отдыха, а также стоянка для велосипедов. Для комфорта и безопасности владельцев квартир в комплексе предусмотрена 
-                система видеонаблюдения, которая охватывает не только секции, но и паркинги, а также двор. Оставить свои машины владельцы квартир смогут в подземном паркинге, рассчитанном на 159 мест. Также в комплексе есть отдельный 
-                паркинг на 137 машиномест для посетителей торгового центра и владельцев офисных помещений.</p>
-              </div>
-            <div class="tab-pane fade" style="height:100%"  id="v-pills-room" role="tabpanel" aria-labelledby="v-pills-settings-tab"><p style="height:100%"  align="justify">Просторные холлы с консьержем, круглосуточная охрана, система видеонаблюдения, лифты высшего класса,
-                отдельное помещение в паркинге для хранения колясок и велосипедов — каждая деталь внутри дома продумана для максимального комфорта жильцов.</p>
-              </div>
-          </div>          
+<div class="mx-5 d-flex justify-content-center">
+    <div class="mx-5 yellow-bg">
+        <div class="col-12 d-flex justify-content-center">
+            <div id="about_compelx" class="col-10 p-2 green-tx mt-5"><p style="text-decoration:underline" class="h2 text-center">Про комплекс</p></div>
         </div>
-    </div>
-</div>
-<div>
- <div class="my-4 col-12 d-flex justify-content-center">
-    <div class="col-9 shadow d-flex flex-wrap m-5">
-        <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-end border-bottom p-3"><div class="d-flex justify-content-center material-icons md-60 col-5">near_me</div>
-            <div class="col-7 d-flex align-items-center pb-2">Центральный <br /> район</div>
-        </div>
-        <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-end border-bottom p-3"><div class="d-flex justify-content-center material-icons md-60 col-5">business_center</div>
-            <div class="col-7 d-flex align-items-center pb-2">Бизнес <br /> класс</div>
-        </div>
-        <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-bottom p-3"><div class="d-flex justify-content-center material-icons md-60 col-5">gpp_good</div>
-            <div class="col-7 d-flex align-items-center">Круглосуточная охрана и видеонаблюдения</div>
-        </div>
-        <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-end p-3"><div class="d-flex justify-content-center material-icons md-60 col-5">foundation</div>
-            <div class="col-7 d-flex align-items-center ">Монолитный <br />  каркас</div>
-        </div>
-        <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-end p-3"><div class="d-flex justify-content-center material-icons md-60 col-5">view_compact</div>
-            <div class="col-7 d-flex align-items-center pb-2">Утеплённые: <br /> стены из газоблока</div>
-        </div>
-        <div class="col-4 d-flex justify-content-center green-tx p-3"><div class="d-flex justify-content-center material-icons md-60 col-5">local_parking</div>
-            <div class="col-7 d-flex align-items-center pb-2">Подземная парковка <br />на 296 мест</div>
-        </div>
-    </div>
-</div>
-
-<div class="col-12 d-flex justify-content-center">
-    <div class="col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Планировочные решения</p></div>
-</div>
-    <div class="d-flex green-bg shadow-lg justify-content-center col-12 m-0">
-        <div class="col-9 row">
-            <div class="col-5 p-0 yellow-tx" >
-                <p align="justify" class="pe-4 pt-5">
-                    Квартиры в комплексе запроектированы с седьмого по двадцать второй этажи. Ни на одном из этажей нет типовых решений. Потому чтобы выбрать свою идеальную квартиру, мы рекомендуем просмотреть планы всех этажей. 
-                    Просторные или наоборот небольшие квартиры с террасами, двухуровневые квартиры с лучшими видами, для большой семьи, для пары или для холостяка – в МФК “Twenty two” каждый найдет для себя идеальный вариант.
-                </p>
-            </div>
-            <div class="col-7 p-0">
-                <img src="{% static 'app/img/cmprsd/visual_2-min.jpg' %}" class="img-fluid" alt="...">
+        <div class="d-flex justify-content-center">
+            <div class="row col-9 border-1 border-bottom border-green p-4 shadow">
+                <div class="d-flex align-items-start p-0">
+                    <div class="nav flex-column nav-pills yellow-bg" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="shadow mb-2 px-2 pt-2 pb-1 nav-link active green-tx border border-yellow rounded-3" id="v-pills-apartment-tab" data-bs-toggle="pill" data-bs-target="#v-pills-apartment" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                            <span class="material-icons md-52">apartment</span><p>Инфоструктура</p>
+                        </button>
+                        <button class="shadow my-2 px-2 pt-2 pb-1 nav-link green-tx border border-yellow rounded-3" id="v-pills-architecture-tab" data-bs-toggle="pill" data-bs-target="#v-pills-architecture" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                            <span class="material-icons md-52">architecture </span><p>Архитектура</p>
+                        </button>
+                        <button class="shadow my-2 px-2 pt-2 pb-1 nav-link green-tx border border-yellow rounded-3" id="v-pills-nature-tab" data-bs-toggle="pill" data-bs-target="#v-pills-nature" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                            <span class="material-icons md-52">nature_people</span><p>Двор</p>
+                        </button>
+                        <button class="shadow mt-2 px-2 pt-2 pb-1 nav-link green-tx border border-yellow rounded-3" id="v-pills-room-tab" data-bs-toggle="pill" data-bs-target="#v-pills-room" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                            <span class="material-icons md-52">meeting_room</span><p>Внутри дома</p>
+                        </button>
+                    </div>
+                    <div class="tab-content border-start border-green green-tx px-5" style="margin-left:5%; margin-top:5%; height:75%" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" style="height:100%" id="v-pills-apartment" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <p style="height:100%" align="justify">
+                                “Twenty two” – это многофункциональный комплекс. Все, что нужно жильцам дома, уже собрано в едином
+                                пространстве под одной крышей. Первые этажи комплекса запроектированы под торговый центр – супермаркет, любимые кофейни и салоны красоты, игровые пространства для детей – все расположено здесь.
+                                Торговый центр сменяют несколько этажей офисных помещений – в комплексе можно не только комфортно жить, отдыхать и делать покупки, но и продуктивно работать.<br /><br />
+                                “Twenty two” расположен на пересечении проспекта Гагарина и улицы Молочной. Он равноудален от двух станций метро “Проспект Гагарина” и “Спортивная”, расстояние до обеих –
+                                900 м, а это всего 10 минут пешком. В пешей доступности от комплекса школы, детские сады, Конный рынок, супермаркеты, тренажерные залы и салоны красоты.<br /><br />
+                                Комплекс находится на одной из главных транспортных артерий города, и в этом одно из главных преимуществ его расположения. До центра Харькова на авто можно доехать за 5 минут, до железнодорожного вокзала –
+                                за 10, а путь в аэропорт займет не больше 15 минут.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" style="height:100%" id="v-pills-architecture" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <p style="height:100%" align="justify">
+                                Комплекс выполнен в архитектурном стиле конструктивизм. Архитекторы отказались от ультрамодных форм и отдали
+                                предпочтение спокойным масштабным решениям. Две башни, объединенные едиными коммерческими помещениями, и двадцать два этажа высоты делают комплекс монументальным. МФК “Twenty two” минималистичный и визуально
+                                целостный, масштабный и сдержанный. Террасы на верхних этажах – интересные детали, которые заставляют рассматривать комплекс. Дополнило идею фасадное решение. В комплексе будет использован вентилируемый навесной фасад.
+                                Этажи с торговыми и офисными помещениями будут выделены акцентным фасадным решением.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" style="height:100%" id="v-pills-nature" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                            <p style="height:100%" align="justify">
+                                Двор комплекса будет просторным и огороженным от посторонних глаз.
+                                Во дворе расположатся детские площадки для детей разного возраста, спортивные площадки, места для отдыха, а также стоянка для велосипедов. Для комфорта и безопасности владельцев квартир в комплексе предусмотрена
+                                система видеонаблюдения, которая охватывает не только секции, но и паркинги, а также двор. Оставить свои машины владельцы квартир смогут в подземном паркинге, рассчитанном на 159 мест. Также в комплексе есть отдельный
+                                паркинг на 137 машиномест для посетителей торгового центра и владельцев офисных помещений.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" style="height:100%" id="v-pills-room" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                            <p style="height:100%" align="justify">
+                                Просторные холлы с консьержем, круглосуточная охрана, система видеонаблюдения, лифты высшего класса,
+                                отдельное помещение в паркинге для хранения колясок и велосипедов — каждая деталь внутри дома продумана для максимального комфорта жильцов.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div> 
-</div>
 
-<!-- <div class="p-0 d-flex justify-content-center mt-5">          
-    <div class="border-start border-end border-yellow col-10 p-0 ">
-            <iframe id="frame" style="width:100%; height:650px" 
-                    src="https://chessgrid.developerit.systems/public/developers/5ecd1c2590de761738c029a3/apartmentComplex/6151c5e35f333e539505f646/layout/61593eeb5f333e5395b45dea?authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiI3Zjc4MGIzYy1iYzgwLTQ1YWMtOTkxMS01YjYyMjlkMTg5NzUiLCJpYXQiOjE2MzMzNTA4NzksImV4cCI6MTc5MTEzODg3OX0.4GXbFFq8RxxxogLwV4gYpzo2V4wS1kUGxj5PztQ_fpE" >
-            </iframe>
-    </div> 
-</div>-->
-<div class="mt-5 col-12 d-flex justify-content-center">
-    <div class="col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Подобрать квартиру</p></div>
+        <div class="my-4 col-12 d-flex justify-content-center">
+            <div class="col-9 shadow d-flex flex-wrap m-5">
+                <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-end border-bottom p-3">
+                    <div class="d-flex justify-content-center material-icons md-60 col-5">near_me</div>
+                    <div class="col-7 d-flex align-items-center pb-2">Центральный <br /> район</div>
+                </div>
+                <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-end border-bottom p-3">
+                    <div class="d-flex justify-content-center material-icons md-60 col-5">business_center</div>
+                    <div class="col-7 d-flex align-items-center pb-2">Бизнес <br /> класс</div>
+                </div>
+                <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-bottom p-3">
+                    <div class="d-flex justify-content-center material-icons md-60 col-5">gpp_good</div>
+                    <div class="col-7 d-flex align-items-center">Круглосуточная охрана и видеонаблюдения</div>
+                </div>
+                <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-end p-3">
+                    <div class="d-flex justify-content-center material-icons md-60 col-5">foundation</div>
+                    <div class="col-7 d-flex align-items-center ">Монолитный <br />  каркас</div>
+                </div>
+                <div class="col-4 d-flex justify-content-center green-tx border-1 border-green border-end p-3">
+                    <div class="d-flex justify-content-center material-icons md-60 col-5">view_compact</div>
+                    <div class="col-7 d-flex align-items-center pb-2">Утеплённые: <br /> стены из газоблока</div>
+                </div>
+                <div class="col-4 d-flex justify-content-center green-tx p-3">
+                    <div class="d-flex justify-content-center material-icons md-60 col-5">local_parking</div>
+                    <div class="col-7 d-flex align-items-center pb-2">Подземная парковка <br />на 296 мест</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 d-flex justify-content-center">
+            <div id="planning" class="col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Планировочные решения</p></div>
+        </div>
+    </div>
 </div>
-<div class="col-12 d-flex justify-content-center">    
-    <div class="col-9 m-2 green-tx ">
-        <p class="d-flex justify-content-center" align="justify">Оставьте свои данные. Наш менеджер позвонит и поможет подобрать квартиры под ваш запрос</p>
+<div class="shadow-lg d-flex green-bg justify-content-center col-12 m-0">
+    <div class="col-8 row">
+        <div class="col-5 p-0 yellow-tx">
+            <p align="justify" class="pe-4 pt-5">
+                Квартиры в комплексе запроектированы с седьмого по двадцать второй этажи. Ни на одном из этажей нет типовых решений. Потому чтобы выбрать свою идеальную квартиру, мы рекомендуем просмотреть планы всех этажей.
+                Просторные или наоборот небольшие квартиры с террасами, двухуровневые квартиры с лучшими видами, для большой семьи, для пары или для холостяка – в МФК “Twenty two” каждый найдет для себя идеальный вариант.
+            </p>
+        </div>
+        <div class="col-7 p-0">
+            <img src="{% static 'app/img/cmprsd/visual_2-min.jpg' %}" class="img-fluid" alt="...">
+        </div>
+    </div>
+</div>
+<div class="yellow-bg">
+    <div class="col-12 d-flex justify-content-center">
+        <div id="apartment" class="col-10 mt-5 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Подобрать квартиру</p></div>
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+        <div class="col-9 m-2 green-tx ">
+            <p class="d-flex justify-content-center" align="justify">Оставьте свои данные. Наш менеджер позвонит и поможет подобрать квартиры под ваш запрос</p>
             <div class="mb-2 col-12 d-flex flex-row col-4 justify-content-center">
                 <div class="col-3">
                     <label for="exampleFormControlInput1" class="form-label my-1">Имя</label>
@@ -143,9 +157,32 @@
                     <input type="text" class="form-control py-2" id="exampleFormControlInput3" placeholder="+380935152040">
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="p-0 yellow-bg d-flex justify-content-center">
+        <div class="border-start border-end border-yellow col-10 p-0 ">
+            <iframe id="frame" style="width:100%; height:650px"
+                    src="https://chessgrid.developerit.systems/public/developers/5ecd1c2590de761738c029a3/apartmentComplex/6151c5e35f333e539505f646/layout/61593eeb5f333e5395b45dea?authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiI3Zjc4MGIzYy1iYzgwLTQ1YWMtOTkxMS01YjYyMjlkMTg5NzUiLCJpYXQiOjE2MzMzNTA4NzksImV4cCI6MTc5MTEzODg3OX0.4GXbFFq8RxxxogLwV4gYpzo2V4wS1kUGxj5PztQ_fpE">
+            </iframe>
+        </div>
+    </div>
+    <div class=" col-12 d-flex justify-content-center">
+        <div id="location" class="col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Расположение</p></div>
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+        <div class="col-8 d-flex flex-row">
+            <div class="col-4 green-bg" style="width:25%;">
+                <a class="col-12 d-flex justify-content-center align-items-center border-bottom" style="height:10%" href="#about_compelx">Магазины</a>
+                <a class="col-12 d-flex justify-content-center align-items-center border-bottom" style="height:10%" href="#planning">Парки</a>
+                <a class="col-12 d-flex justify-content-center align-items-center border-bottom" style="height:10%" href="#apartment">Рестораны</a>
+                <a class="col-12 d-flex justify-content-center align-items-center border-bottom" style="height:10%" href="#location">Здоровье</a>
+                <a class="col-12 d-flex justify-content-center align-items-center border-bottom" style="height:10%" href="#location">Транспортные сети</a>
+                <a class="col-12 d-flex justify-content-center align-items-center border-bottom" style="height:10%" href="#location">Учебные заведения</a>
+            </div>
+            <div id="map" style="width:75%; height:500px"></div>
+        </div>
     </div>
 </div>
-
 
 
 {% endblock %}
@@ -154,7 +191,19 @@
 <script>
     //On load
     $(window).on('load', function () {
-        $('#loading').hide();  
+        $('#loading').hide();
     })
+</script>
+<script type="text/javascript">
+    var map;
+
+    DG.then(function () {
+        map = DG.map('map', {
+            center: [49.978456, 36.251739],
+            zoom: 15
+        });
+
+        DG.marker([49.978456, 36.251739]).addTo(map).bindPopup('Вы кликнули по мне!');
+    });
 </script>
 {% endblock %}

@@ -15,6 +15,9 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
     <style>
         #loading {
@@ -47,9 +50,9 @@
             text-decoration: none;
         }
 
-        a:hover {
-            background-position: 0 100%;
-        }
+            a:hover {
+                background-position: 0 100%;
+            }
 
         .menu {
             color: white;
@@ -69,9 +72,9 @@
             transition: width 0.15s;
         }
 
-        .logo:hover {
-            width: 175px !important;
-        }
+            .logo:hover {
+                width: 175px !important;
+            }
 
         .menu:hover {
             background-position: 0 100%;
@@ -112,8 +115,7 @@
             font-family: 'Montserrat', sans-serif;
             background-image: url('../static/app/img/sup_items/visual_4.jpg');
             background-repeat: no-repeat;
-            background-size: cover;
-
+            background-size: 100% 70%;
         }
 
         .green-bg {
@@ -168,13 +170,11 @@
             color: rgb(209, 195, 180) !important;
             border-color: rgb(209, 195, 180) !important;
         }
-
     </style>
 </head>
 
-<body class="this p-0 mx-5 yellow-bg mb-0">
-    <div class="shadow-lg yellow-bg">
-
+<body class="this p-0 yellow-bg mb-0">
+    <div class="">
         <div id="loading">
             <div class="text-center">
                 <div class="spinner-border text-warning" role="status">
@@ -199,9 +199,9 @@
                             <span class="col-1" style="height:100%;"></span>
                             <span class="col-10 align-items-center d-flex justify-content-evenly" style="height:100%;">
                                 <a class="" href="#about_compelx">ПРО КОМПЛЕКС</a>
-                                <a class="" href="#">ПЛАНИРОВКА</a>
-                                <a class="" href="#">ЗАДАТЬ ВОПРОС</a>
-                                <a class="" href="#">РАСПОЛОЖЕНИЕ</a>
+                                <a class="" href="#planning">ПЛАНИРОВКА</a>
+                                <a class="" href="#apartment">ЗАДАТЬ ВОПРОС</a>
+                                <a class="" href="#location">РАСПОЛОЖЕНИЕ</a>
                             </span>
                             <a class="col-1 align-items-center d-flex justify-content-center border-start border-yellow" style="height:100%;">RU</a>
                         </div>
@@ -234,13 +234,11 @@
                 </div>
             </div>
         </nav>
-
-        {% block content %}
-        {% endblock %}
+            {% block content %}
+            {% endblock %}
     </div>
-    <footer class="col-12 d-flex flex-row" style="height:70px">
-        <div class="col-9 green-bg">1</div>
-        <div class="col-3 orange-bg">1</div>
+    <footer class="green-bg mt-5" style="height:70px">
+        
     </footer>
 
     <script src="{% static 'app/scripts/jquery-3.6.0.js' %}"></script>
