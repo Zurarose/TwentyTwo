@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TwentyTwo</title>
-    {% load staticfiles %}
+    {% load static %}
     <link rel="shortcut icon" href="{% static 'app/img/cmprsd/22_logo_small.png' %}" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{% static 'app/content/fontawesome/css/all.css' %}" rel="stylesheet">
@@ -35,6 +35,7 @@
         }
 
         a {
+            cursor: pointer;
             font-weight: bold;
             position: relative;
             display: inline-block;
@@ -170,6 +171,24 @@
             color: rgb(209, 195, 180) !important;
             border-color: rgb(209, 195, 180) !important;
         }
+
+        #carouselExampleIndicators .carousel-inner .carousel-item {
+            width: 100%;
+            height: calc((100vw - 20px) * 0.5) /*16:9 aspect ratio*/
+        }
+
+        .contact_info {
+            outline: 0px !important;
+            -webkit-appearance: none;
+            box-shadow: none !important;
+        }
+
+            .contact_info:focus {
+                outline: 0px !important;
+                -webkit-appearance: none;
+                box-shadow: none !important;
+                color: white;
+            }
     </style>
 </head>
 

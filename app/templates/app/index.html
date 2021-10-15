@@ -1,6 +1,6 @@
 {% extends "app/layout.html" %}
-{% load static %}
 {% block content %}
+{% load static %}
 <div id="carouselExampleIndicators" class="shadow-sm carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -126,43 +126,64 @@
 <div class="shadow-lg border-top border-bottom border-1 border-dark d-flex green-bg justify-content-center col-12 m-0">
     <div class="col-8 row">
         <div class="col-5 p-0 yellow-tx">
-            <p align="justify" class="pe-4 pt-5">
+            <p align="justify" class="pe-4 pt-4">
                 Квартиры в комплексе запроектированы с седьмого по двадцать второй этажи. Ни на одном из этажей нет типовых решений. Потому чтобы выбрать свою идеальную квартиру, мы рекомендуем просмотреть планы всех этажей.
                 Просторные или наоборот небольшие квартиры с террасами, двухуровневые квартиры с лучшими видами, для большой семьи, для пары или для холостяка – в МФК “Twenty two” каждый найдет для себя идеальный вариант.
             </p>
         </div>
         <div class="col-7 p-0">
-            <img src="{% static 'app/img/cmprsd/visual_2-min.jpg' %}" class="img-fluid" alt="...">
+            <div id="carouselExampleIndicators_center" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3500">
+                        <img src="{% static 'app/img/cmprsd/visual_2-min.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3500">
+                        <img src="{% static 'app/img/cmprsd/visual_3-min.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators_center" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators_center" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </div>
 </div>
-<div class="mx-5 ">
+
+<div class="mx-5">
     <div class="mx-5 yellow-bg">
         <div class="col-12 d-flex justify-content-center">
             <div id="apartment" class="col-10 mt-5 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Подобрать квартиру</p></div>
         </div>
         <div class="col-12 d-flex justify-content-center">
-            <div class="col-9 m-2 green-tx ">
-                <p class="d-flex justify-content-center" align="justify">Оставьте свои данные. Наш менеджер позвонит и поможет подобрать квартиры под ваш запрос</p>
-                <div class="mb-2 col-12 d-flex flex-row col-4 justify-content-center">
-                    <div class="col-3">
-                        <label for="exampleFormControlInput1" class="form-label my-1">Имя</label>
-                        <input type="text" class="form-control py-2" id="exampleFormControlInput1" placeholder="Имя">
+            <div class="col-7 white-tx orange-bg shadow-lg p-4 rounded-3">
+                <p class="d-flex justify-content-center h4" align="left">Оставьте свои данные. Наш менеджер позвонит и поможет подобрать квартиры под ваш запрос</p>
+                <form class="pt-4">
+                    <div class="mb-3 border-bottom col-12">
+                        <label for="InputName" class="form-label">Ваше имя</label>
+                        <input type="text" required class="contact_info white-tx form-control border-0 px-1 orange-bg col-12" id="InputName">
                     </div>
-                    <div class="col-3">
-                        <label for="exampleFormControlInput2" class="form-label my-1">Почта</label>
-                        <input type="email" class="form-control py-2" id="exampleFormControlInput2" placeholder="name@example.com">
+                    <div class="mb-3 border-bottom col-12">
+                        <label for="InputEmail" class="form-label">Электронный адрес</label>
+                        <input type="email" required class="contact_info white-tx form-control border-0 px-1 orange-bg col-12" id="InputEmail" aria-describedby="emailHelp">
                     </div>
-                    <div class="col-3">
-                        <label for="exampleFormControlInput3" class="form-label my-1">Номер телефона</label>
-                        <input type="text" class="form-control py-2" id="exampleFormControlInput3" placeholder="+380935152040">
+                    <div class="mb-3 border-bottom col-12">
+                        <label for="inputPhone" class="form-label">Номер телефона</label>
+                        <input type="text" class="contact_info white-tx form-control border-0 px-1 orange-bg col-12" id="inputPhone">
                     </div>
-                </div>
+                    <div class="col-12 pt-4 d-flex justify-content-end">
+                        <a class="h4 ">ОТПРАВИТЬ</a>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="p-0 d-flex justify-content-center">
-            <div class="border-start border-end border-yellow col-10 p-0 ">
-                <iframe id="frame" style="width:100%; height:650px"
+        <div class="p-0 mt-5 d-flex justify-content-center">
+            <div class="col-12 p-0 ">
+                <iframe class="" id="frame" style="width:100%; height:650px"
                         src="https://chessgrid.developerit.systems/public/developers/5ecd1c2590de761738c029a3/apartmentComplex/6151c5e35f333e539505f646/layout/61593eeb5f333e5395b45dea?authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiI3Zjc4MGIzYy1iYzgwLTQ1YWMtOTkxMS01YjYyMjlkMTg5NzUiLCJpYXQiOjE2MzMzNTA4NzksImV4cCI6MTc5MTEzODg3OX0.4GXbFFq8RxxxogLwV4gYpzo2V4wS1kUGxj5PztQ_fpE">
                 </iframe>
             </div>
@@ -206,11 +227,11 @@
             restaurants = DG.featureGroup(),
             schools = DG.featureGroup(),
             transports = DG.featureGroup(),
-        map = DG.map('map', {
-            center: [49.978350, 36.251630],
-            zoom: 16,
-            zoomControl: false
-        });
+            map = DG.map('map', {
+                center: [49.978350, 36.251630],
+                zoom: 16,
+                zoomControl: false
+            });
 
         complex = DG.divIcon({
             iconSize: [0, 0],
@@ -308,7 +329,7 @@
             markets.removeFrom(map);
             restaurants.removeFrom(map);
             schools.removeFrom(map);
-            parks.removeFrom(map);           
+            parks.removeFrom(map);
             DG.marker([49.979951, 36.260473], { icon: transport }).addTo(transports).bindPopup('метро "Спортивна"');
             DG.marker([49.978861, 36.26261], { icon: transport }).addTo(transports).bindPopup('метро "Метробудівників"');
             DG.marker([49.988662, 36.264745], { icon: transport }).addTo(transports).bindPopup('метро "Захисників України"');
@@ -316,7 +337,7 @@
             DG.marker([49.993601, 36.229853], { icon: transport }).addTo(transports).bindPopup('метро "Історичний музей"');
             DG.marker([49.981492, 36.243211], { icon: transport }).addTo(transports).bindPopup('метро "Гагаріна проспект"');
             DG.marker([49.976014, 36.282079], { icon: transport }).addTo(transports).bindPopup('метро "Завод ім. Малишева"');
-            DG.marker([49.993571, 36.221000], { icon: transport }).addTo(transports).bindPopup('метро "Центральний Ринок"');           
+            DG.marker([49.993571, 36.221000], { icon: transport }).addTo(transports).bindPopup('метро "Центральний Ринок"');
             transports.addTo(map);
         });
         $("#parks").click(function () {
@@ -356,10 +377,10 @@
             DG.marker([49.991472, 36.257968], { icon: park }).addTo(schools).bindPopup('Харківська загальноосвітня школа №19');
             DG.marker([49.98593, 36.252267], { icon: park }).addTo(schools).bindPopup('Детская музыкальная школа №5 им. Римского-Корсакова');
 
-           
+
             schools.addTo(map);
         });
-        $("#medicine").click(function () {           
+        $("#medicine").click(function () {
             map.setView([49.977035, 36.251084], 14.5);
             parks.removeFrom(map);
             schools.removeFrom(map);
@@ -378,7 +399,7 @@
             DG.marker([49.976567, 36.25157], { icon: medic }).addTo(medicine).bindPopup('Аптека низькі цін');
             medicine.addTo(map);
         });
-       
+
     });
 </script>
 {% endblock %}
