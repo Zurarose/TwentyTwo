@@ -24,7 +24,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'b3cb972c-8444-4804-95bd-89c95c882ac7'
 
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -59,14 +58,6 @@ MIDDLEWARE = [
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = None
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SESSION_COOKIE_SECURE = True
-
-# Security Headers
-SECURE_CONTENT_TYPE_NOSNIFF = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
-SECURE_HSTS_SECONDS = 3600
 ROOT_URLCONF = 'TwentyTwo.urls'
 
 # Template configuration
