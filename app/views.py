@@ -5,9 +5,9 @@ Definition of views.
 from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpRequest
-from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.decorators.clickjacking import xframe_options_exempt
 
-@ensure_csrf_cookie
+@xframe_options_exempt
 def home(request):
     """Renders the home page."""
     return render(
