@@ -58,7 +58,7 @@ MIDDLEWARE = [
 ]
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
-X_FRAME_OPTIONS = 'ALLOW-FROM https://chessgrid.developerit.systems/public/developers/5ecd1c2590de761738c029a3/apartmentComplex/6151c5e35f333e539505f646/layout/61593eeb5f333e5395b45dea?authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiI3Zjc4MGIzYy1iYzgwLTQ1YWMtOTkxMS01YjYyMjlkMTg5NzUiLCJpYXQiOjE2MzMzNTA4NzksImV4cCI6MTc5MTEzODg3OX0.4GXbFFq8RxxxogLwV4gYpzo2V4wS1kUGxj5PztQ_fpE'
+X_FRAME_OPTIONS = 'ALLOW-FROM https://chessgrid.developerit.systems'
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = None
 
