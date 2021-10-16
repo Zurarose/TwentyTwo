@@ -35,12 +35,11 @@
             z-index: 99;
         }
 
-        a {
+        a:not(.send, .menu) {
             cursor: pointer;
             font-weight: bold;
             position: relative;
             display: inline-block;
-            color: white;
             overflow: hidden;
             background: linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
             background-clip: text;
@@ -52,11 +51,32 @@
             text-decoration: none;
         }
 
-            a:hover {
+            a:not(.send, .menu):hover {
+                background-position: 0 100%;
+            }
+
+        .send {
+            cursor: pointer;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            background: linear-gradient(to right, rgb(2, 68, 58), rgb(2, 68, 58) 50%, white 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 100%;
+            background-position: 100%;
+            transition: background-position 275ms ease;
+            text-decoration: none;
+        }
+
+            .send:hover {
                 background-position: 0 100%;
             }
 
         .menu {
+            cursor:pointer;
             color: white;
             overflow: hidden;
             background: linear-gradient(to right, rgb(2, 68, 58), rgb(2, 68, 58) 50%, white 50%);
@@ -70,12 +90,12 @@
         }
 
         .logo {
-            width: 165px;
-            transition: width 0.15s;
+            width: 165px !important;
+            transition: width 0.15s !important;
         }
 
             .logo:hover {
-                width: 175px !important;
+                width: 190px !important;
             }
 
         .menu:hover {
@@ -192,7 +212,6 @@
             }
     </style>
 </head>
-
 <body class="this p-0 yellow-bg mb-0">
     <div class="">
         <div id="loading">

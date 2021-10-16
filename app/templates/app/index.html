@@ -157,11 +157,18 @@
 <div class="mx-5">
     <div class="mx-5 yellow-bg">
         <div class="col-12 d-flex justify-content-center">
-            <div id="apartment" class="col-10 mt-5 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Подобрать квартиру</p></div>
+            <div id="apartment" class="mt-5 col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Подобрать квартиру</p></div>
+        </div>
+        <div class="p-0 d-flex justify-content-center">
+            <div class="col-12 p-0 ">
+                <iframe class="" id="frame" style="width:100%; height:650px" referrerpolicy="no-referrer"
+                        src="https://chessgrid.developerit.systems/public/developers/5ecd1c2590de761738c029a3/apartmentComplex/6151c5e35f333e539505f646/layout/61593eeb5f333e5395b45dea?authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiI3Zjc4MGIzYy1iYzgwLTQ1YWMtOTkxMS01YjYyMjlkMTg5NzUiLCJpYXQiOjE2MzMzNTA4NzksImV4cCI6MTc5MTEzODg3OX0.4GXbFFq8RxxxogLwV4gYpzo2V4wS1kUGxj5PztQ_fpE">
+                </iframe>
+            </div>
         </div>
         <div class="col-12 d-flex justify-content-center">
             <div class="col-7 white-tx orange-bg shadow-lg p-4 rounded-3">
-                <p class="d-flex justify-content-center h4" align="left">Оставьте свои данные. Наш менеджер позвонит и поможет подобрать квартиры под ваш запрос</p>
+                <p class="col-12 p-0 d-flex justify-content-center h4" align="center">Оставьте свои данные. Наш менеджер позвонит и поможет подобрать квартиры под ваш запрос</p>
                 <form class="pt-4">
                     <div class="mb-3 border-bottom col-12">
                         <label for="InputName" class="form-label">Ваше имя</label>
@@ -176,21 +183,14 @@
                         <input type="text" class="contact_info white-tx form-control border-0 px-1 orange-bg col-12" id="inputPhone">
                     </div>
                     <div class="col-12 pt-4 d-flex justify-content-end">
-                        <a class="h4 ">ОТПРАВИТЬ</a>
+                        <a class="h4 send white-tx">ОТПРАВИТЬ</a>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="p-0 mt-5 d-flex justify-content-center">
-            <div class="col-12 p-0 ">
-                <iframe class="" id="frame" style="width:100%; height:650px" referrerpolicy="no-referrer" 
-                        src="https://chessgrid.developerit.systems/public/developers/5ecd1c2590de761738c029a3/apartmentComplex/6151c5e35f333e539505f646/layout/61593eeb5f333e5395b45dea?authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiI3Zjc4MGIzYy1iYzgwLTQ1YWMtOTkxMS01YjYyMjlkMTg5NzUiLCJpYXQiOjE2MzMzNTA4NzksImV4cCI6MTc5MTEzODg3OX0.4GXbFFq8RxxxogLwV4gYpzo2V4wS1kUGxj5PztQ_fpE">
-                </iframe>
 
-            </div>
-        </div>
-        <div class=" col-12 d-flex justify-content-center">
-            <div id="location" class="col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Расположение</p></div>
+        <div class="col-12 d-flex justify-content-center">
+            <div id="location" class="mt-5 col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Расположение</p></div>
         </div>
         <div class="col-12 d-flex justify-content-center">
             <div class="col-10 shadow-lg d-flex flex-row mb-5">
@@ -366,17 +366,17 @@
             transports.removeFrom(map);
             restaurants.removeFrom(map);
             parks.removeFrom(map);
-            DG.marker([49.978616, 36.256305], { icon: park }).addTo(schools).bindPopup('Спеціалізована школа з поглибленим вивченням іноземної мови');
-            DG.marker([49.980196, 36.253512], { icon: park }).addTo(schools).bindPopup('UA21. Школа танцю');
-            DG.marker([49.978616, 36.256305], { icon: park }).addTo(schools).bindPopup('Top Quality School');
-            DG.marker([49.981147, 36.251198], { icon: park }).addTo(schools).bindPopup('Харківська гімназія №46 ім. М.В. Ломоносова');
-            DG.marker([49.972484, 36.250913], { icon: park }).addTo(schools).bindPopup('Харківська гімназія №12');
-            DG.marker([49.98218, 36.249782], { icon: park }).addTo(schools).bindPopup('Харківська об`єднано-технічна школа товариства сприяння оборони України');
-            DG.marker([49.981765, 36.246937], { icon: park }).addTo(schools).bindPopup('Регіональний центр професійної освіти інноваційних технологій будівництва та промисловості');
-            DG.marker([49.982329, 36.243232], { icon: park }).addTo(schools).bindPopup('КРОК');
-            DG.marker([49.985267, 36.240464], { icon: park }).addTo(schools).bindPopup('Харківська загальноосвітня школа №10');
-            DG.marker([49.991472, 36.257968], { icon: park }).addTo(schools).bindPopup('Харківська загальноосвітня школа №19');
-            DG.marker([49.98593, 36.252267], { icon: park }).addTo(schools).bindPopup('Детская музыкальная школа №5 им. Римского-Корсакова');
+            DG.marker([49.978616, 36.256305], { icon: school }).addTo(schools).bindPopup('Спеціалізована школа з поглибленим вивченням іноземної мови');
+            DG.marker([49.980196, 36.253512], { icon: school }).addTo(schools).bindPopup('UA21. Школа танцю');
+            DG.marker([49.978616, 36.256305], { icon: school }).addTo(schools).bindPopup('Top Quality School');
+            DG.marker([49.981147, 36.251198], { icon: school }).addTo(schools).bindPopup('Харківська гімназія №46 ім. М.В. Ломоносова');
+            DG.marker([49.972484, 36.250913], { icon: school }).addTo(schools).bindPopup('Харківська гімназія №12');
+            DG.marker([49.98218, 36.249782], { icon: school }).addTo(schools).bindPopup('Харківська об`єднано-технічна школа товариства сприяння оборони України');
+            DG.marker([49.981765, 36.246937], { icon: school }).addTo(schools).bindPopup('Регіональний центр професійної освіти інноваційних технологій будівництва та промисловості');
+            DG.marker([49.982329, 36.243232], { icon: school }).addTo(schools).bindPopup('КРОК');
+            DG.marker([49.985267, 36.240464], { icon: school }).addTo(schools).bindPopup('Харківська загальноосвітня школа №10');
+            DG.marker([49.991472, 36.257968], { icon: school }).addTo(schools).bindPopup('Харківська загальноосвітня школа №19');
+            DG.marker([49.98593, 36.252267], { icon: school }).addTo(schools).bindPopup('Детская музыкальная школа №5 им. Римского-Корсакова');
 
 
             schools.addTo(map);
