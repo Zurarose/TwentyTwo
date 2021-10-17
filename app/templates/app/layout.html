@@ -177,11 +177,11 @@
         }
 
         .white-bg {
-            background-color: white;
+            background-color: white !important;
         }
 
         .white-tx {
-            color: white;
+            color: white !important;
         }
 
         .nav-link.active {
@@ -260,13 +260,18 @@
                         <a class="col-12 menu align-items-center d-flex justify-content-center" style="height:100%;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <span class="material-icons md-60">dehaze</span>
                         </a>
-                        <div class="offcanvas offcanvas-end" style="width:15%;" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas offcanvas-end green-bg" style="width:15%;" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                             <div class="offcanvas-header">
-                                <h5 id="offcanvasRightLabel">Offcanvas right</h5>
-                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"> </button>
+                                <h5 id="offcanvasRightLabel" class="yellow-tx">Меню</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"> </button>
                             </div>
                             <div class="offcanvas-body">
-                                ...
+                                <div class="col-12 green-bg">
+                                    <a class="col-12 d-flex justify-content-center align-items-center border-bottom my-3"  href="#">Новости</a>
+                                    <a class="col-12 d-flex justify-content-center align-items-center border-bottom my-3"  href="#">Планировка</a>
+                                    <a class="col-12 d-flex justify-content-center align-items-center border-bottom my-3"  href="#">Контакты</a>
+                                    <a class="col-12 d-flex justify-content-center align-items-center border-bottom my-3"  href="#">О компании</a>                         
+                                </div>
                             </div>
                         </div>
                     </div>
