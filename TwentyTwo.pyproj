@@ -1790,6 +1790,8 @@
     <Content Include="app\static\app\img\not_cmprsd\visual_1.jpg" />
     <Content Include="app\static\app\img\not_cmprsd\visual_2.jpg" />
     <Content Include="app\static\app\img\not_cmprsd\visual_3.jpg" />
+    <Content Include="app\static\app\img\sup_items\22_logo_light.jpf" />
+    <Content Include="app\static\app\img\sup_items\22_logo_light.png" />
     <Content Include="app\static\app\img\sup_items\bg.png" />
     <Content Include="app\static\app\img\sup_items\menu.svg" />
     <Content Include="app\static\app\img\sup_items\visual_4.jpg" />
