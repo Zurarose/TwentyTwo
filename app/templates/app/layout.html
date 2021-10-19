@@ -231,9 +231,24 @@
             border: 1px solid;
             border-color: rgb(2, 68, 58);
         }
+
+
+        /*responsive*/
+        @media screen and (max-width: 768px) {
+            .hidden {
+                visibility:hidden;
+            }
+            .offcanvas{
+                width:30% !important;
+            }
+            .resp_text{
+                font-size:1.3vh;
+            }
+        }
+
     </style>
 </head>
-<body class="this p-0 yellow-bg mb-0">
+<body class="p-0 yellow-bg mb-0">
     <div class="">
         <div id="loading">
             <div class="text-center">
@@ -246,7 +261,7 @@
             <div class="col-12 p-0">
                 <div class="row shadow-sm m-0 p-0 border-bottom border-yellow">
                     <div class="d-flex justify-content-center col-2 p-0 border-end orange-bg border-yellow">
-                        <a class="m-1 logo" href="{% url 'home' %}"><img style="width: 160px;" src="{% static 'app/img/cmprsd/22_logo_white.png' %}" class="img-fluid" alt="..."></a>
+                        <a class="m-1 logo d-flex align-items-center" href="{% url 'home' %}"><img style="width: 160px;" src="{% static 'app/img/cmprsd/22_logo_white.png' %}" class="img-fluid" alt="..."></a>
                     </div>
 
                     <div class="col-8 border-end p-0 green-bg yellow-tx border-yellow">
@@ -256,8 +271,8 @@
                             <a class="col-1 align-items-center d-flex justify-content-center  border-start border-yellow" style="height:100%;">UA</a>
                         </div>
                         <div class="col-12 p-0 align-items-center d-flex justify-content-center" style="height: 50%;">
-                            <span class="col-1" style="height:100%;"></span>
-                            <span class="col-10 align-items-center d-flex justify-content-evenly" style="height:100%;">
+                            <span class="hidden col-1" style="height:100%;"></span>
+                            <span class="hidden col-10 align-items-center d-flex justify-content-evenly" style="height:100%;">
                                 <a class="" href="#about_compelx">ПРО КОМПЛЕКС</a>
                                 <a class="" href="#planning">ПЛАНИРОВКА</a>
                                 <a class="" href="#apartment">КВАРТИРЫ</a>
@@ -268,12 +283,12 @@
                     </div>
 
                     <div class="col-1 p-0 green-bg yellow-tx flex-column">
-                        <div class="col-12 p-0 border-bottom border-yellow align-items-center d-flex justify-content-evenly" style="height: 50%;">
+                        <div class="hidden col-12 p-0 border-bottom border-yellow align-items-center d-flex justify-content-evenly" style="height: 50%;">
                             <a href="https://www.facebook.com/zhilstroj2ua" target="_blank" class="social-link social-facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.instagram.com/zhilstroj2ua/" target="_blank" class="social-link social-instagram"><i class="fab fa-instagram"></i></a>
                             <a href="https://www.youtube.com/channel/UC4_WUC7so0BlakWziTWD9ZA" target="_blank" class="social-link social-youtube"><i class="fab fa-youtube"></i></a>
                         </div>
-                        <div class="align-items-center d-flex justify-content-center " style="height: 50%;">
+                        <div class="hidden align-items-center d-flex justify-content-center " style="height: 50%;">
                             <a href="tel:+380577021361" style="font-size: 1vw">057 702 13 61</a>
                         </div>
                     </div>
@@ -304,10 +319,10 @@
             {% endblock %}
     </div>
     <footer class="py-3 green-bg d-flex justify-content-center">
-        <div class="col-10 d-flex flex-row">
-            <div class="col-3 d-flex flex-column justify-content-start" data-aos="fade-right" data-aos-offset="0">
+        <div class="col-xl-10 col-md-11 d-flex flex-row">
+            <div class="col-3 me-md-2 d-flex flex-column justify-content-start" data-aos="fade-right" data-aos-offset="0">
                 <a class="mb-1 d-flex justify-content-start" href="{% url 'home' %}"><img style="width: 180px;" src="{% static 'app/img/sup_items/22_logo_light.png' %}" class="img-fluid" alt="..."></a>
-                <a class="d-flex justify-content-start m-0 h5 text-center" href="https://zhilstroj-2.ua/complexes/mfk22/" target="_blank">© ОДО "ЖИЛСТРОЙ-2"</a>
+                <a class="resp_text d-flex justify-content-start m-0 h5 text-center" href="https://zhilstroj-2.ua/complexes/mfk22/" target="_blank">© ОДО "ЖИЛСТРОЙ-2"</a>
             </div>
 
             <div class="col-2">
@@ -315,7 +330,7 @@
                 <a class="col-12 d-flex justify-content-start align-items-center py-1" href="#">Контакты</a>
                 <a class="col-12 d-flex justify-content-start align-items-center pt-2" href="#">О компании</a>
             </div>
-            <div class="col-4">
+            <div class="col-xl-4 col-md-5">
                 <a href="https://goo.gl/maps/FEHbED6Sq3oQ38ZPA" target="_blank" class="col-12 d-flex justify-content-start align-items-center pb-2 yellow-tx">г. Харьков, ул. Космическая,12</a>
                 <a href="https://goo.gl/maps/FEHbED6Sq3oQ38ZPA" target="_blank" class="col-12 d-flex justify-content-start align-items-center py-1 yellow-tx">Время работы с 9:00 до 18:00</a>
                 <a class="col-12 d-flex justify-content-start align-items-center pt-2 yellow-tx" href="tel:+380577021361">057 702 13 61</a>
@@ -325,7 +340,7 @@
                 <a href="https://www.instagram.com/zhilstroj2ua/" target="_blank" class="social-link social-instagram py-1">Instagram: <i class="fab fa-instagram"></i></a>
                 <a href="https://www.youtube.com/channel/UC4_WUC7so0BlakWziTWD9ZA" target="_blank" class="social-link social-youtube pt-2">YouTube: <i class="fab fa-youtube"></i></a>
             </div>
-            <div class="col-1 d-flex flex-column">
+            <div class="hidden col-xl-1 d-flex flex-column">
                 <a class="d-flex justify-content-end mt-3 yellow-tx">UA</a>
                 <a class="d-flex justify-content-end mt-2 yellow-tx">RU</a>
             </div>
