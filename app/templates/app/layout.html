@@ -17,12 +17,12 @@
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
 
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/aos-master/dist/aos.css' %}" />
-
+    <script src="{% static 'app/content/aos-master/dist/aos.js' %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
 
     <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
 
-    <script src="{% static 'app/content/aos-master/dist/aos.js' %}"></script>
+
 
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
     <style>
@@ -238,6 +238,7 @@
             .hidden {
                 visibility: hidden;
             }
+
             .resp_text {
                 font-size: 0.9em;
             }
@@ -246,11 +247,13 @@
                 width: 0px;
                 visibility: hidden;
             }
+
             .tab-content {
                 margin-left: 1% !important;
-                margin-top:0% !important;
-                border:none !important;
+                margin-top: 0% !important;
+                border: none !important;
             }
+
             #frame {
                 height: 35em !important;
                 width: 50em !important;
@@ -261,45 +264,55 @@
             .resp_text {
                 line-height: 2vw;
             }
-            .remark{
-                width:0px;
-                visibility:hidden;
+
+            .remark {
+                width: 0px;
+                visibility: hidden;
             }
         }
+
         @media screen and (max-width: 767px) {
             .hiddenXS {
                 width: 0px !important;
                 visibility: hidden !important;
                 height: 0px !important;
             }
-            .hideXSborder{
+
+            .hideXSborder {
                 border: none !important;
             }
-            .hideXordBorder{
-                border-left:none !important;
-                border-right:none !important;
+
+            .hideXordBorder {
+                border-left: none !important;
+                border-right: none !important;
             }
-            .addBtnBorder{
+
+            .addBtnBorder {
                 border-bottom: 1px solid !important;
                 border-color: rgb(2, 68, 58) !important;
             }
+
             .remark {
                 width: 0px;
                 visibility: hidden;
             }
-            #markers{
-                width:100% !important;
+
+            #markers {
+                width: 100% !important;
             }
-            #map{
-                width:100% !important;
-                height:300px !important;
+
+            #map {
+                width: 100% !important;
+                height: 300px !important;
             }
-            .marks{
+
+            .marks {
                 height: 16.6% !important;
             }
+
             #frame {
-               height: 20em !important;
-               width: 30em !important;
+                height: 20em !important;
+                width: 22em !important;
             }
         }
     </style>
