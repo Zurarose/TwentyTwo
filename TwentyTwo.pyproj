@@ -1826,6 +1826,7 @@
     <Content Include="app\static\app\img\cmprsd\1-min.jpg" />
     <Content Include="app\static\app\img\cmprsd\2-min.jpg" />
     <Content Include="app\static\app\img\cmprsd\22_logo-min.png" />
+    <Content Include="app\static\app\img\cmprsd\22_logo_ico.png" />
     <Content Include="app\static\app\img\cmprsd\22_logo_small.png" />
     <Content Include="app\static\app\img\cmprsd\22_logo_white.png" />
     <Content Include="app\static\app\img\cmprsd\3-min.jpg" />
