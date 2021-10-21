@@ -11,7 +11,7 @@
     <link href="{% static 'app/content/fontawesome/css/all.css' %}" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
@@ -52,6 +52,9 @@
             background-size: 200% 100%;
             background-position: 100%;
             transition: background-position 275ms ease;
+            -webkit-transition: background-position 275ms ease;
+            -moz-transition: background-position 275ms ease;
+            -o-transition: background-position 275ms ease;
             text-decoration: none;
         }
 
@@ -70,6 +73,9 @@
             background-size: 200% 100%;
             background-position: 100%;
             transition: background-position 275ms ease;
+            -webkit-transition: background-position 275ms ease;
+            -moz-transition: background-position 275ms ease;
+            -o-transition: background-position 275ms ease;
             text-decoration: none;
         }
 
@@ -88,6 +94,9 @@
             background-size: 200% 100%;
             background-position: 100%;
             transition: background-position 275ms ease;
+            -webkit-transition: background-position 275ms ease;
+            -moz-transition: background-position 275ms ease;
+            -o-transition: background-position 275ms ease;
             text-decoration: none;
         }
 
@@ -275,6 +284,7 @@
             .resp_text {
                 font-size: 0.9em;
             }
+
             .hiddenXS {
                 width: 0px !important;
                 visibility: hidden !important;
@@ -293,7 +303,7 @@
             .addBtnBorder {
                 border-bottom: 1px solid !important;
                 border-color: rgb(2, 68, 58) !important;
-            }     
+            }
 
             #markers {
                 width: 100% !important;
@@ -312,8 +322,9 @@
                 height: 25em !important;
                 width: 40em !important;
             }
-            #shortinfo{
-                display:inherit !important;
+
+            #shortinfo {
+                display: inherit !important;
             }
         }
     </style>
