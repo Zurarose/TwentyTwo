@@ -46,6 +46,9 @@
             letter-spacing: 0;
             overflow: hidden;
             background: linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
+            background: -webkit-linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
+            background: -o-linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
+            background: -moz-linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -67,6 +70,9 @@
             font-weight: bold;
             overflow: hidden;
             background: linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
+            background: -webkit-linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
+            background: -o-linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
+            background: -moz-linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -88,6 +94,9 @@
             color: white;
             overflow: hidden;
             background: linear-gradient(to right, rgb(2, 68, 58), rgb(2, 68, 58) 50%, white 50%);
+            background: -webkit-linear-gradient(to right, rgb(2, 68, 58), rgb(2, 68, 58) 50%, white 50%);
+            background: -o-linear-gradient(to right, rgb(2, 68, 58), rgb(2, 68, 58) 50%, white 50%);
+            background: -moz-linear-gradient(to right, rgb(2, 68, 58), rgb(2, 68, 58) 50%, white 50%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -103,6 +112,9 @@
         .logo {
             width: 165px !important;
             transition: width 0.15s !important;
+            -webkit-transition: width 0.15s !important;
+            -moz-transition: width 0.15s !important;
+            -o-transition: width 0.15s !important;
         }
 
             .logo:hover {
@@ -197,7 +209,8 @@
 
         .nav-link.active {
             -webkit-transition: background-color 300ms linear;
-            -ms-transition: background-color 300ms linear;
+            -moz-transition: background-color 300ms linear;
+            -o-transition: background-color 300ms linear;
             transition: background-color 300ms linear;
             background-color: rgb(2, 68, 58) !important;
             color: rgb(209, 195, 180) !important;
@@ -400,7 +413,7 @@
     <footer class="py-3 green-bg d-flex justify-content-center">
         <div class="col-xl-10 col-md-11 col-12 px-xl-0 px-md-0 px-1 d-flex flex-row">
             <div class="col-7 col-md-3 col-xl-3 me-md-2 d-flex flex-column justify-content-start" data-aos="fade-right" data-aos-offset="0">
-                <a class="mt-2 mt-xl-0 mt-md-0 mb-1 d-flex justify-content-start" href="{% url 'home' %}"><img style="width: 180px;" src="{% static 'app/img/sup_items/22_logo_light.png' %}" class="img-fluid" alt="..."></a>
+                <a class="mt-2 mt-xl-0 mt-md-0 mb-1 d-flex justify-content-start" href="{% url 'home' %}"><img style="width: 180px; max-height:68px;" src="{% static 'app/img/sup_items/22_logo_light.png' %}" class="img-fluid" alt="..."></a>
                 <a class="resp_text d-flex justify-content-start m-0 h5 text-center" href="https://zhilstroj-2.ua/complexes/mfk22/" target="_blank">© ОДО "ЖИЛСТРОЙ-2"</a>
             </div>
 
