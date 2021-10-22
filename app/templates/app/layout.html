@@ -63,6 +63,8 @@
 
             a:not(.send, .menu):hover {
                 background-position: 0 100%;
+                background-position-x: 0;
+                background-position-y: 100%;
             }
 
         .send {
@@ -87,6 +89,8 @@
 
             .send:hover {
                 background-position: 0 100%;
+                background-position-x: 0;
+                background-position-y: 100%;
             }
 
         .menu {
@@ -108,6 +112,11 @@
             -o-transition: background-position 275ms ease;
             text-decoration: none;
         }
+            .menu:hover {
+                background-position: 0 100%;
+                background-position-x: 0;
+                background-position-y: 100%;
+            }
 
         .logo {
             width: 165px !important;
@@ -121,10 +130,7 @@
                 width: 190px !important;
             }
 
-        .menu:hover {
-            background-position: 0 100%;
-        }
-
+        
         .material-icons.md-18 {
             font-size: 18px;
         }
