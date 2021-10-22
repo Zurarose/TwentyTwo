@@ -51,8 +51,6 @@
     <Folder Include="app\static\app\" />
     <Folder Include="app\static\app\content\" />
     <Folder Include="app\static\app\content\aos-master\" />
-    <Folder Include="app\static\app\content\aos-master\demo\" />
-    <Folder Include="app\static\app\content\aos-master\demo\css\" />
     <Folder Include="app\static\app\content\aos-master\dist\" />
     <Folder Include="app\static\app\content\aos-master\src\" />
     <Folder Include="app\static\app\content\aos-master\src\js\" />
@@ -92,9 +90,6 @@
     <Content Include="app\static\app\content\aos-master\bower.json" />
     <Content Include="app\static\app\content\aos-master\CHANGELOG.md" />
     <Content Include="app\static\app\content\aos-master\CONTRIBUTING.md" />
-    <Content Include="app\static\app\content\aos-master\demo\async.html" />
-    <Content Include="app\static\app\content\aos-master\demo\css\styles.css" />
-    <Content Include="app\static\app\content\aos-master\demo\simple.html" />
     <Content Include="app\static\app\content\aos-master\dist\aos.css" />
     <Content Include="app\static\app\content\aos-master\dist\aos.js" />
     <Content Include="app\static\app\content\aos-master\karma.conf.js" />
@@ -1823,6 +1818,7 @@
     <Content Include="app\static\app\content\fontawesome\webfonts\fa-solid-900.ttf" />
     <Content Include="app\static\app\content\fontawesome\webfonts\fa-solid-900.woff" />
     <Content Include="app\static\app\content\fontawesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="app\static\app\fonts\Montserrat-Regular.ttf" />
     <Content Include="app\static\app\img\cmprsd\1-min.jpg" />
     <Content Include="app\static\app\img\cmprsd\2-min.jpg" />
     <Content Include="app\static\app\img\cmprsd\22_logo-min.png" />
@@ -1852,10 +1848,6 @@
     <Content Include="app\static\app\content\bootstrap.css" />
     <Content Include="app\static\app\content\bootstrap.min.css" />
     <Content Include="app\static\app\content\site.css" />
-    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="app\static\app\scripts\bootstrap.js" />
     <Content Include="app\static\app\scripts\bootstrap.min.js" />
     <Content Include="app\static\app\scripts\jquery.validate-vsdoc.js" />
