@@ -6,9 +6,10 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>TwentyTwo</title>
     {% load static %}
-    <link rel="shortcut icon" href="{% static 'app/img/cmprsd/22_logo_ico.png' %}" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{% static 'app/content/fontawesome/css/all.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'app/img/cmprsd/22_logo_ico.png' %}"/>
+  
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/aos-master/dist/aos.css' %}" />
     <script src="{% static 'app/content/aos-master/dist/aos.js' %}"></script>
@@ -16,6 +17,7 @@
     <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
     <style>
+       
         #loading {
             position: fixed;
             display: flex;
@@ -166,6 +168,9 @@
             background-repeat: no-repeat;
             background-size: 100% 100%;
         }
+            body.modal-open {
+                overflow: visible !important;
+            }
 
         .green-bg {
             background-color: rgb(2, 68, 58) !important;
@@ -295,6 +300,12 @@
                 width: 0px;
                 visibility: hidden;
             }
+            .hiddenXL{
+                width: 0px !important;
+                visibility: hidden !important;
+                height: 0px !important;
+                display:none;
+            }
         }
 
         @media screen and (max-width: 767px) {
@@ -306,6 +317,7 @@
                 width: 0px !important;
                 visibility: hidden !important;
                 height: 0px !important;
+                display:none;
             }
 
             .hideXSborder {
@@ -355,15 +367,15 @@
     </style>
 </head>
 <body class="p-0 yellow-bg mb-0 container-fluid p-0">
-    <div class="">
-        <div id="loading">
+    <div id="loading">
             <div class="text-center">
-                <div class="spinner-border text-warning" role="status">
-                    <span class="visually-hidden"></span>
+                <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
+                  <span class="visually-hidden">Loading...</span>
                 </div>
             </div>
         </div>
-        <nav class="p-0 sticky-xl-top">
+    <div class="">      
+        <nav class="p-0" id="header">
                 <div class="row shadow-sm m-0 p-0 border-bottom border-yellow">
                     <div class="d-flex justify-content-center col-9 col-xl-2 col-md-3 p-0 border-end orange-bg border-yellow">
                         <a class="m-1 logo d-flex align-items-center" href="{% url 'home' %}"><img style="width: 160px;" src="{% static 'app/img/cmprsd/22_logo_white.png' %}" class="img-fluid" alt="..."></a>
@@ -378,10 +390,12 @@
                         <div class="col-12 p-0 align-items-center d-flex justify-content-center" style="height: 50%;">
                             <span class="hiddenSize col-1" style="height:100%;"></span>
                             <span class="hidden col-10 align-items-center d-flex justify-content-evenly" style="height:100%;">
+                                {% if request.path == "/" %}
                                 <a class="" href="#about_compelx">ПРО КОМПЛЕКС</a>
                                 <a class="" href="#planning">ПЛАНИРОВКА</a>
                                 <a class="" href="#apartment">КВАРТИРЫ</a>
                                 <a class="" href="#location">РАСПОЛОЖЕНИЕ</a>
+                                {% endif %}
                             </span>
                             <a class="col-xl-1 col-md-2 align-items-center d-flex justify-content-center border-start border-yellow" style="height:100%;">RU</a>
                         </div>
@@ -408,7 +422,7 @@
                             </div>
                             <div class="offcanvas-body">
                                 <div class="col-12 green-bg">
-                                    <a class="memu-items col-12 d-inline-block d-md-flex d-xl-flex justify-content-center align-items-center border-bottom my-2 py-3" href="#">Новости</a>
+                                    <a class="memu-items col-12 d-inline-block d-md-flex d-xl-flex justify-content-center align-items-center border-bottom my-2 py-3" href="{% url 'news' %}">Новости</a>
                                     <a class="memu-items col-12 d-inline-block d-md-flex d-xl-flex justify-content-center align-items-center border-bottom my-2 py-3" href="#">Планировка</a>
                                     <a class="memu-items col-12 d-inline-block d-md-flex d-xl-flex justify-content-center align-items-center border-bottom my-2 py-3" href="#">Контакты</a>
                                     <a class="memu-items col-12 d-inline-block d-md-flex d-xl-flex justify-content-center align-items-center border-bottom my-2 py-3" href="#">О компании</a>
@@ -430,7 +444,7 @@
             </div>
 
             <div class="hiddenXS col-2">
-                <a class="col-12 d-flex justify-content-start align-items-center pb-0 pb-xl-2 pb-md-2" href="#">Новости</a>
+                <a class="col-12 d-flex justify-content-start align-items-center pb-0 pb-xl-2 pb-md-2" href="{% url 'news' %}">Новости</a>
                 <a class="col-12 d-flex justify-content-start align-items-center py-0 py-xl-1 py-md-1" href="#">Контакты</a>
                 <a class="col-12 d-flex justify-content-start align-items-center pt-0 mt-xl-1 pt-md-1" href="#">О компании</a>
             </div>

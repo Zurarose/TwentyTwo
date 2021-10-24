@@ -32,12 +32,12 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\admin.py" />
     <Compile Include="app\forms.py" />
     <Compile Include="app\models.py" />
     <Compile Include="app\tests.py" />
     <Compile Include="app\views.py" />
     <Compile Include="app\__init__.py" />
-    <Compile Include="app\migrations\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="TwentyTwo\__init__.py" />
     <Compile Include="TwentyTwo\settings.py" />
@@ -1842,9 +1842,10 @@
     <Content Include="app\static\app\img\sup_items\menu.svg" />
     <Content Include="app\static\app\img\sup_items\visual_4.jpg" />
     <Content Include="app\static\app\scripts\jquery-3.6.0.js" />
+    <Content Include="app\templates\app\news.html" />
+    <Content Include="db.sqlite3" />
     <Content Include="Procfile" />
     <Content Include="requirements.txt" />
-    <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
     <Content Include="app\static\app\content\bootstrap.min.css" />
     <Content Include="app\static\app\content\site.css" />

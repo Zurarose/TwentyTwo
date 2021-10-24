@@ -212,32 +212,30 @@
         <div class="modal fade show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-header col-12 p-0" style="min-height:60px;">                 
+                    <div class="d-flex justify-content-center col-2 p-0 border-end orange-bg border-yellow" style="height:100%;">
+                        <a class="m-1 logo d-flex align-items-center" href="{% url 'home' %}"><img style="width: 160px;" src="{% static 'app/img/cmprsd/22_logo_white.png' %}" class="img-fluid" alt="..."></a>
+                    </div>
+                    <div class="col-10 green-bg d-flex justify-content-end align-items-center" style="height:100%;">
+                        <button type="button" class="btn-close btn-close-white me-5" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                 </div>
-                <div class="modal-body py-0">
+                <div class="modal-body p-0">
                     <iframe id="iframeModalCompleN" referrerpolicy="no-referrer" src="https://chessgrid.developerit.systems/public/developers/5ecd1c2590de761738c029a3/apartmentComplex/6151c5e35f333e539505f646/houseGrid/6151c5f65f333e539505fa67?authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiI3Zjc4MGIzYy1iYzgwLTQ1YWMtOTkxMS01YjYyMjlkMTg5NzUiLCJpYXQiOjE2MzQ1NjEwMTIsImV4cCI6MTc5MjM0OTAxMn0.9mqY0YCDN0DJgCphJ8MQSar1Lxt4wjNzwpGcp5dFdwY&amp;lang=ru" style="width: 100%; height: 100vh; margin-bottom: 0;" frameborder="0"></iframe>
                 </div>
-                <div class="modal-footer">
-                    <div class="">
-                    <div class="mobile-container-phones">
-                        <div class="inn-wrap-phone-mod">
-                            <div class="logo-mobile-row">
-                                <a href="https://zhilstroj-2.ua/" class="logo-site">
-                                    <img src="https://zhilstroj-2.ua/wp-content/uploads/2020/09/logo-jilbud2-right-black.svg" alt="">
-                                    <span>ТДВ "Житлобуд-2"</span>
-                                </a>
-                            </div>
-                            <div class="dropdown-dop-info">
-                                Отдел продаж
-                            </div>
-                            <a href="tel:+380577021361" class="dropdown-item"> +38 (057) 702-13-61</a>
-                            <a href="tel:+380577270717" class="dropdown-item"> +38 (057) 727-07-17</a>
-                            <a href="tel:+380577152828" class="dropdown-item"> +38 (057) 715-28-28</a>
-                        </div>
-                    </div>
-                </div>                  
+                <div class="modal-footer green-bg d-flex justify-content-center">
+                     <div class="col-xl-10 col-md-11 col-12 px-xl-0 px-md-0 px-1 d-flex flex-row">
+                        <div class="col-7 col-md-5 col-xl-5 d-flex flex-column justify-content-start">
+                            <a class="hiddenSize hiddenXL mt-1 mt-xl-0 mt-md-0 mb-1 d-flex justify-content-start" href="{% url 'home' %}"><img style="width: 180px; max-height:68px;" src="{% static 'app/img/sup_items/22_logo_light.png' %}" class="img-fluid" alt="..."></a>
+                            <a class="resp_text d-flex justify-content-start align-items-end m-0 h5 text-center" href="https://zhilstroj-2.ua/complexes/mfk22/" target="_blank">© ОДО "ЖИЛСТРОЙ-2"</a>
+                        </div>              
+                        <div class="col-5 col-md-7 col-xl-7 d-flex flex-column flex-md-row flex-xl-row justify-content-end">
+                            <span class="yellow-tx d-md-flex d-xl-flex justify-content-start align-items-center">Отдел продаж:</span>
+                            <a class="d-inline-block mx-0 mx-md-2 mx-xl-2 d-md-flex d-xl-flex justify-content-start align-items-center pt-0 " href="tel:+380577021361">057 702 13 61;</a>
+                            <a class="d-inline-block mx-0 mx-md-2 mx-xl-2 d-md-flex d-md-flex d-xl-flex justify-content-start align-items-center pt-0 " href="tel:+380577270717">057 727 07 17;</a>                          
+                            <a class="d-inline-block mx-0 mx-md-2 mx-xl-2 d-md-flex d-md-flex d-xl-flex justify-content-start align-items-center pt-0 " href="tel:+380577152828">057 715 28 28;</a>
+                        </div>                       
+                    </div>               
                 </div>
             </div>
             </div>
@@ -291,6 +289,7 @@
     //On load
     $(window).on('load', function () {
         $('#loading').hide();
+        $("#header").addClass("sticky-xl-top");
         const mediaQuery = window.matchMedia('(min-width: 1200px)')
         // Check if the media query is true
         if (mediaQuery.matches) {
