@@ -117,6 +117,8 @@
     <Content Include="app\static\app\content\aos-master\test\index.js" />
     <Content Include="app\static\app\content\aos-master\webpack.config.js" />
     <Content Include="app\static\app\content\aos-master\yarn.lock" />
+    <Content Include="app\static\app\content\bootstrap.css.map" />
+    <Content Include="app\static\app\content\bootstrap.min.css.map" />
     <Content Include="app\static\app\content\fontawesome\attribution.js" />
     <Content Include="app\static\app\content\fontawesome\css\all.css" />
     <Content Include="app\static\app\content\fontawesome\css\all.min.css" />
@@ -1841,6 +1843,8 @@
     <Content Include="app\static\app\img\sup_items\bg.png" />
     <Content Include="app\static\app\img\sup_items\menu.svg" />
     <Content Include="app\static\app\img\sup_items\visual_4.jpg" />
+    <Content Include="app\static\app\scripts\bootstrap.js.map" />
+    <Content Include="app\static\app\scripts\bootstrap.min.js.map" />
     <Content Include="app\static\app\scripts\jquery-3.6.0.js" />
     <Content Include="app\templates\app\news.html" />
     <Content Include="db.sqlite3" />
