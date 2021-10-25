@@ -6,13 +6,17 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>TwentyTwo</title>
     {% load static %}
+    <script src="{% static 'app/scripts/jquery-3.6.0.js' %}"></script>
+    <script src="{% static 'app/scripts/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'app/scripts/respond.js' %}"></script>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3ad61f7b57.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="{% static 'app/img/cmprsd/22_logo_ico.png' %}"/>
   
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'app/content/aos-master/dist/aos.css' %}" />
-    <script src="{% static 'app/content/aos-master/dist/aos.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/aos-2/dist/aos.css' %}" />
+    <script src="{% static 'app/content/aos-2/dist/aos.js' %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
     <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
@@ -31,11 +35,20 @@
             background-color: #fff6e5;
             z-index: 99;
         }
+        #toUp {
+            visibility:hidden;
+            display: none;
+            position: fixed;
+            display: flex;
+            z-index: 99;
+            width:50px;
+            height:50px;
+        }
         @font-face{
             font-family: "Montserrat";
             src: url('../static/app/fonts/Montserrat-Regular.ttf') format("truetype");
         }
-        a:not(.send, .menu) {
+        a:not(.send, .menu, .icon_info) {
             cursor: pointer;
             font-weight: bold;
             letter-spacing: 0;
@@ -63,6 +76,42 @@
                 background-position-y: 100%;
                 color: rgba(255, 255, 255, 0);
             }
+        .icon_info {
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: 0;
+            overflow: hidden;
+            background: linear-gradient(to right, rgb(242, 99, 66), rgb(242, 99, 66) 50%, rgb(2, 68, 58) 50%);
+            background: -webkit-linear-gradient(to right, rgb(242, 99, 66), rgb(242, 99, 66) 50%, rgb(2, 68, 58) 50%);
+            background: -o-linear-gradient(to right, rgb(242, 99, 66), rgb(242, 99, 66) 50%, rgb(2, 68, 58) 50%);
+            background: -moz-linear-gradient(to right, rgb(242, 99, 66), rgb(242, 99, 66) 50%, rgb(2, 68, 58) 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0);
+            color: rgba(255, 255, 255, 0);
+            background-size: 200% 100%;
+            background-position: 100%;
+            transition: background-position 275ms ease;
+            -webkit-transition: background-position 275ms ease;
+            -moz-transition: background-position 275ms ease;
+            -o-transition: background-position 275ms ease;
+            text-decoration: none;
+        }
+            .icon_info:hover {
+                background-position: 0 100%;
+                background-position-x: 0;
+                background-position-y: 100%;
+                color: rgba(255, 255, 255, 0);
+            }
+        .popover-header {
+
+            color: white;
+            background-color: rgb(242, 99, 66) !important;
+            }
+        .popover-body {
+            color: rgb(209, 195, 180) !important;
+            background: rgb(2, 68, 58) !important;
+        }
 
         .send {
             cursor: pointer;
@@ -289,6 +338,10 @@
                 height: 35em !important;
                 width: 50em !important;
             }
+            #toUp {
+                bottom: 22%;
+                left: 1%;
+            }
         }
 
         @media screen and (min-width: 1200px) {
@@ -305,6 +358,10 @@
                 visibility: hidden !important;
                 height: 0px !important;
                 display:none;
+            }
+            #toUp {
+                bottom: 21%;
+                right: 7em;
             }
         }
 
@@ -337,7 +394,10 @@
             #markers {
                 width: 100% !important;
             }
-
+            #toUp {
+                bottom: 22%;
+                left: 2%;
+            }
             #map {
                 width: 100% !important;
                 height: 300px !important;
@@ -374,6 +434,7 @@
                 </div>
             </div>
         </div>
+
     <div class="">      
         <nav class="p-0" id="header">
                 <div class="row shadow-sm m-0 p-0 border-bottom border-yellow">
@@ -423,7 +484,7 @@
                             <div class="offcanvas-body">
                                 <div class="col-12 green-bg">
                                     <a class="memu-items col-12 d-inline-block d-md-flex d-xl-flex justify-content-center align-items-center border-bottom my-2 py-3" href="{% url 'news' %}">Новости</a>
-                                    <a class="memu-items col-12 d-inline-block d-md-flex d-xl-flex justify-content-center align-items-center border-bottom my-2 py-3" href="#">Планировка</a>
+                                    <a class="memu-items col-12 d-inline-block d-md-flex d-xl-flex justify-content-center align-items-center border-bottom my-2 py-3" href="{% url 'plans' %}">Планировка</a>
                                     <a class="memu-items col-12 d-inline-block d-md-flex d-xl-flex justify-content-center align-items-center border-bottom my-2 py-3" href="#">Контакты</a>
                                     <a class="memu-items col-12 d-inline-block d-md-flex d-xl-flex justify-content-center align-items-center border-bottom my-2 py-3" href="#">О компании</a>
                                     <a class="memu-items col-12 d-inline-block d-md-flex d-xl-flex justify-content-center align-items-center border-bottom my-2 py-3" href="#">Коммерческая недвижимость</a>
@@ -463,15 +524,8 @@
                 <a class="d-flex justify-content-end mt-2">RU</a>
             </div>
         </div>
-    </footer>
-
-    <script src="{% static 'app/scripts/jquery-3.6.0.js' %}"></script>
-    <script src="{% static 'app/scripts/bootstrap.min.js' %}"></script>
-    <script src="{% static 'app/scripts/respond.js' %}"></script>
+    </footer>      
     {% block scripts %}
-    <script>
-        AOS.init();
-    </script>
     {% endblock %}
 
 </body>

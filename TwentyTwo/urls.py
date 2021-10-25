@@ -16,7 +16,8 @@ urlpatterns = [
     path('', views.home, name='home'),   
     path('', RedirectView.as_view(url=reverse_lazy('admin:index'))),
     path('admin/', admin.site.urls),
-    path('news', views.news, name='news'), 
+    path('news/', views.news, name='news'), 
+    path('plans/', views.plans, name='plans'), 
 
 ]
 

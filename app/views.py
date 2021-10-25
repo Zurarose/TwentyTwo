@@ -26,6 +26,9 @@ def news(request):
     instances = News.objects.all()
     return render (request, 'app/news.html', {'instances': instances})
 
+def plans(request):
+    return render (request, 'app/plans.html')
+
 def login(request):                  
     """Renders the home page."""
     if request.user.is_authenticated:
