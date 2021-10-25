@@ -11,25 +11,25 @@
     {% if instances %}
         {% for row in instances %}
         <div class="col-xl-4 col-md-6 col-12 p-2 card mb-3" data-aos="fade-down" style="background: rgba(255,255,255,0); border:none;">
-          <img src="{{row.image.url}}" class="card-img-top shadow-lg" alt="...">
+          <img src="{{row.image.url|safe}}" class="card-img-top shadow-lg" alt="...">
           <div class="card-body green-bg">
-            <h5 class="shadow-lg card-title yellow-tx">{{row.title}}</h5>
+            <h5 class="card-title yellow-tx">{{row.title|safe}}</h5>
           </div>
-            <button type="button" class="btn orange-bg white-tx" data-bs-toggle="modal" data-bs-target="#Modal{{row.pk}}">
-              <p class="p-0 m-0 h5">Подробнее</p>
+            <button type="button" class="btn orange-bg white-tx" data-bs-toggle="modal" data-bs-target="#Modal{{row.pk|safe}}">
+              <p class="p-0 m-0 h5 shadow-lg ">Подробнее</p>
             </button>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="Modal{{row.pk}}" tabindex="-1" aria-labelledby="ModalLabel{{row.pk}}" aria-hidden="true">
+        <div class="modal fade" id="Modal{{row.pk|safe}}" tabindex="-1" aria-labelledby="ModalLabel{{row.pk|safe}}" aria-hidden="true">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header orange-bg">
-                <h5 class="modal-title white-tx" id="ModalLabel{{row.pk}}">{{row.title}}</h5>
+                <h5 class="modal-title white-tx" id="ModalLabel{{row.pk|safe}}">{{row.title|safe}}</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body p-0 yellow-bg">
                 <img src="{{row.image.url}}" class="col-12 p-0" alt="...">
-                <p class="pt-3 px-3 green-tx" align="justify">{{row.text|linebreaksbr}}</p>
+                <p class="pt-3 px-3 green-tx" align="justify">{{row.text|safe|linebreaksbr}}</p>
               </div>
               <div class="modal-footer green-bg">
                 <button type="button" class="btn orange-bg white-tx" data-bs-dismiss="modal">Закрыть</button>

@@ -209,7 +209,7 @@
             </div>
         </div>
        
-        <div class="modal fade show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade show" id="frameModal" tabindex="-1" aria-labelledby="frameModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header col-12 p-0" style="min-height:60px;">                 
@@ -309,8 +309,7 @@
         if (mediaQueryXS.matches) {
             $(".icon_info").attr("data-bs-placement", "top");
         }      
-        AOS.init();
-              
+        AOS.init();              
         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
           return new bootstrap.Popover(popoverTriggerEl)
@@ -331,11 +330,10 @@
     window.addEventListener('message', function (message) {
         console.log(message.data);
         $('#iframeModalCompleN').prop('src', message.data)
-        var Modal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+        var Modal = new bootstrap.Modal(document.getElementById('frameModal'), {
             keyboard: false
         });
-        Modal.show();
-  
+        Modal.show(); 
     });
     $(document).scroll(function () {
     var y = $(this).scrollTop();

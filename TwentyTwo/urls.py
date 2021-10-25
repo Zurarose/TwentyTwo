@@ -14,12 +14,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.home, name='home'),   
-    path('', RedirectView.as_view(url=reverse_lazy('admin:index'))),
     path('admin/', admin.site.urls),
     path('news/', views.news, name='news'), 
     path('plans/', views.plans, name='plans'), 
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
