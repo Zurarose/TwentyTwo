@@ -9,17 +9,18 @@
     <script src="{% static 'app/scripts/jquery-3.6.0.js' %}"></script>
     <script src="{% static 'app/scripts/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'app/scripts/respond.js' %}"></script>
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3ad61f7b57.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="{% static 'app/img/cmprsd/22_logo_ico.png' %}"/>
-  
-    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'app/content/aos-2/dist/aos.css' %}" />
-    <script src="{% static 'app/content/aos-2/dist/aos.js' %}"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />   
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />-->
     <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+   
     <style>
        
         #loading {
@@ -421,7 +422,7 @@
             }
             .memu-items {
                 text-align: center;
-            }
+            }          
 
         }
     </style>
@@ -525,7 +526,6 @@
         </div>
     </footer>      
     {% block scripts %}
-    {% endblock %}
-
+    {% endblock %}  
 </body>
 </html>
