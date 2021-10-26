@@ -3,3 +3,5 @@ gunicorn
 django-heroku
 psycopg2==2.8.6
 pillow
+django-storages
+boto3

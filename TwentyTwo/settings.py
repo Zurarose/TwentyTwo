@@ -25,7 +25,7 @@ SECRET_KEY = 'b3cb972c-8444-4804-95bd-89c95c882ac7'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 SESSION_COOKIES_SAMESITE = "None"
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
     #myapp
     'app',
 ]
@@ -57,6 +58,34 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+#AmazonS3
+USE_S3 = 'TRUE'
+
+if USE_S3 == 'TRUE':
+    # aws settings
+    AWS_ACCESS_KEY_ID = 'AKIAYBPL34RCTLWSYDSF'
+    AWS_SECRET_ACCESS_KEY = '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'
+    AWS_STORAGE_BUCKET_NAME = 'twentytwo.zhilstroj'
+    AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+    # s3 static settings
+    AWS_LOCATION = 'static'
+    STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    DEFAULT_FILE_STORAGE = 'TwentyTwo.storage_backends.MediaStorage'
+    
+else:
+    STATIC_URL = 'app/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    MEDIA_URL = '/mediafiles/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+
+    
+
+
+
+
+#Frame
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 X_FRAME_OPTIONS = 'ALLOW-FROM https://chessgrid.developerit.systems'
 CSRF_COOKIE_SECURE = True
@@ -116,13 +145,7 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.1/howto/static-files/
-STATIC_URL = '/static/'
-STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'media_root')
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 

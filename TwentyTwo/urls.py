@@ -18,6 +18,6 @@ urlpatterns = [
     path('news/', views.news, name='news'), 
     path('plans/', views.plans, name='plans'), 
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 
 
