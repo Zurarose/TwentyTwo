@@ -25,7 +25,7 @@ SECRET_KEY = 'b3cb972c-8444-4804-95bd-89c95c882ac7'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 SESSION_COOKIES_SAMESITE = "None"
 
@@ -60,7 +60,6 @@ MIDDLEWARE = [
 
 #AmazonS3
 USE_S3 = 'TRUE'
-
 if USE_S3 == 'TRUE':
     # aws settings
     AWS_ACCESS_KEY_ID = 'AKIAYBPL34RCTLWSYDSF'
@@ -73,15 +72,11 @@ if USE_S3 == 'TRUE':
     STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     DEFAULT_FILE_STORAGE = 'TwentyTwo.storage_backends.MediaStorage'
-    
 else:
     STATIC_URL = 'app/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     MEDIA_URL = '/mediafiles/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
-
-    
-
 
 
 
