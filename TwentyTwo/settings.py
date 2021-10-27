@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 import posixpath
 import django_heroku
+from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -56,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 #AmazonS3
@@ -78,8 +80,6 @@ else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     MEDIA_URL = '/mediafiles/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
-
-
 
 #Frame
 X_FRAME_OPTIONS = 'SAMEORIGIN'
@@ -141,7 +141,13 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-
+LANGUAGES = (
+    ('ru-RU',_('English')),
+    ('uk', _('Ukrainian'))
+)
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 

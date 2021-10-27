@@ -59,11 +59,15 @@
     <Folder Include="app\static\app\scripts\" />
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
+    <Folder Include="locale\" />
+    <Folder Include="locale\uk\" />
+    <Folder Include="locale\uk\LC_MESSAGES\" />
     <Folder Include="TwentyTwo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\static\app\content\bootstrap.css.map" />
     <Content Include="app\static\app\content\bootstrap.min.css.map" />
+    <Content Include="app\static\app\content\translate.txt" />
     <Content Include="app\static\app\fonts\Montserrat-Regular.ttf" />
     <Content Include="app\static\app\img\cmprsd\1-min.jpg" />
     <Content Include="app\static\app\img\cmprsd\2-min.jpg" />
@@ -95,6 +99,8 @@
     <Content Include="app\templates\app\plans.html" />
     <Content Include="app\templates\app\news.html" />
     <Content Include="db.sqlite3" />
+    <Content Include="locale\uk\LC_MESSAGES\django.mo" />
+    <Content Include="locale\uk\LC_MESSAGES\django.po" />
     <Content Include="Procfile" />
     <Content Include="requirements.txt" />
     <Content Include="app\static\app\content\bootstrap.css" />

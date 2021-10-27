@@ -1,10 +1,10 @@
 {% extends "app/layout.html" %}
 {% block content %}
 {% load static %}
-
+{% load i18n %}
 <div class="container-fluid yellow-bg" style="min-height: 100vh;">
     <div class="col-12 d-flex justify-content-center mb-2">
-        <div id="apartment" class="mt-xl-2 mt-md-2 mt-2 col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Планировка комплекса</p></div>
+        <div id="apartment" class="mt-xl-2 mt-md-2 mt-2 col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">{% trans 'Планировка комплекса' %}</p></div>
     </div>
 
     <div class="h-100 d-flex d-flex justify-content-center col-12 p-0"> 
@@ -30,10 +30,10 @@
                      <div class="col-xl-10 col-md-11 col-12 px-xl-0 px-md-0 px-1 d-flex flex-row">
                         <div class="col-7 col-md-5 col-xl-5 d-flex flex-column justify-content-start">
                             <a class="hiddenSize hiddenXL mt-1 mt-xl-0 mt-md-0 mb-1 d-flex justify-content-start" href="{% url 'home' %}"><img style="width: 180px; max-height:68px;" src="{% static 'app/img/sup_items/22_logo_light.png' %}" class="img-fluid" alt="..."></a>
-                            <a class="resp_text d-flex justify-content-start align-items-end m-0 h5 text-center" href="https://zhilstroj-2.ua/complexes/mfk22/" target="_blank">© ОДО "ЖИЛСТРОЙ-2"</a>
+                            <a class="resp_text d-flex justify-content-start align-items-end m-0 h5 text-center" href="https://zhilstroj-2.ua/complexes/mfk22/" target="_blank">{% trans '© ОДО "ЖИЛСТРОЙ-2"' %}</a>
                         </div>              
                         <div class="col-5 col-md-7 col-xl-7 d-flex flex-column flex-md-row flex-xl-row justify-content-end">
-                            <span class="yellow-tx d-md-flex d-xl-flex justify-content-start align-items-center">Отдел продаж:</span>
+                            <span class="yellow-tx d-md-flex d-xl-flex justify-content-start align-items-center">{% trans 'Отдел продаж:' %}</span>
                             <a class="d-inline-block mx-0 mx-md-2 mx-xl-2 d-md-flex d-xl-flex justify-content-start align-items-center pt-0 " href="tel:+380577021361">057 702 13 61;</a>
                             <a class="d-inline-block mx-0 mx-md-2 mx-xl-2 d-md-flex d-md-flex d-xl-flex justify-content-start align-items-center pt-0 " href="tel:+380577270717">057 727 07 17;</a>                          
                             <a class="d-inline-block mx-0 mx-md-2 mx-xl-2 d-md-flex d-md-flex d-xl-flex justify-content-start align-items-center pt-0 " href="tel:+380577152828">057 715 28 28;</a>

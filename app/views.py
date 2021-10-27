@@ -6,9 +6,6 @@ from datetime import datetime
 from django.shortcuts import render, redirect
 from django.http import HttpRequest
 from django.views.decorators.clickjacking import xframe_options_exempt
-from django.contrib.auth import authenticate
-from django.contrib.auth import login as log 
-from django.contrib.auth import logout as lgout
 from django.contrib import messages
 from .models import *
 

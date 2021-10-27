@@ -1,10 +1,10 @@
 {% extends "app/layout.html" %}
 {% block content %}
 {% load static %}
-
+{% load i18n %}
 <div class="container-fluid yellow-bg" style="min-height: 100vh;">
     <div class="col-12 d-flex justify-content-center mb-2">
-        <div id="apartment" class="mt-xl-2 mt-md-2 mt-2 col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">Новости</p></div>
+        <div id="apartment" class="mt-xl-2 mt-md-2 mt-2 col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">{% trans 'Новости' %}</p></div>
     </div>
 
     <div class="h-100 d-flex d-flex justify-content-start y flex-row flex-wrap col-12 p-0"> 
@@ -16,7 +16,7 @@
             <h5 class="card-title yellow-tx">{{row.title|safe}}</h5>
           </div>
             <button type="button" class="btn orange-bg white-tx" data-bs-toggle="modal" data-bs-target="#Modal{{row.pk|safe}}">
-              <p class="p-0 m-0 h5 shadow-lg ">Подробнее</p>
+              <p class="p-0 m-0 h5 shadow-lg ">{% trans 'Подробнее' %}</p>
             </button>
         </div>
         <!-- Modal -->
@@ -32,7 +32,7 @@
                 <p class="pt-3 px-3 green-tx" align="justify">{{row.text|safe|linebreaksbr}}</p>
               </div>
               <div class="modal-footer green-bg">
-                <button type="button" class="btn orange-bg white-tx" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn orange-bg white-tx" data-bs-dismiss="modal">{% trans 'Закрыть' %}</button>
               </div>
             </div>
           </div>
