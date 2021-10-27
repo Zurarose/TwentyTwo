@@ -14,8 +14,8 @@ from django.conf.urls.static import static
 from django.views.static import serve
 
 urlpatterns = [
-    path('', views.home, name='home'),   
     path('admin/', admin.site.urls),
+    path('', views.home, name='home'),       
     path('news/', views.news, name='news'), 
     path('plans/', views.plans, name='plans'), 
 ]

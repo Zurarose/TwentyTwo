@@ -25,7 +25,7 @@ SECRET_KEY = 'b3cb972c-8444-4804-95bd-89c95c882ac7'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 SESSION_COOKIES_SAMESITE = "None"
 
@@ -60,11 +60,12 @@ MIDDLEWARE = [
 
 #AmazonS3
 USE_S3 = 'TRUE'
+
 if USE_S3 == 'TRUE':
     # aws settings
     AWS_ACCESS_KEY_ID = 'AKIAYBPL34RCTLWSYDSF'
     AWS_SECRET_ACCESS_KEY = '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'
-    AWS_STORAGE_BUCKET_NAME = 'twentytwo.zhilstroj'
+    AWS_STORAGE_BUCKET_NAME = 'twenty-two'
     AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
     # s3 static settings
