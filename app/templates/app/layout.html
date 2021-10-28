@@ -474,21 +474,21 @@
                             </div>
                             <div class="offcanvas-body">
                                 <div class="h-100">
-                                    <div class="col-12 green-bg h-50">
+                                    <div class="col-12 green-bg h-70">
                                         <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" href="{% url 'news' %}">{% trans 'Новости' %}</a>
                                         <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" href="{% url 'plans' %}">{% trans 'Планировка' %}</a>
                                         <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" target="_blank" href="https://zhilstroj-2.ua/kontakty/">{% trans 'Контакты' %}</a>
                                         <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" target="_blank" href="https://zhilstroj-2.ua/kompaniya-segodnya/">{% trans 'О компании' %}</a>
                                         <a style="pointer-events: none;" class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" href="#">{% trans 'Коммерческая недвижимость' %}</a>
                                     </div>
-                                    <div class="text-center h-50 hiddenXL col-12 d-flex justify-content-evenly flex-row align-items-end">
-                                        <form action="{% url 'set_language' %}" class="hiddenXS" method="post">
+                                    <div class="text-center h-30 col-12 d-flex justify-content-evenly flex-row align-items-end">
+                                        <form action="{% url 'set_language' %}" class="hiddenXL" method="post">
                                           {% csrf_token %}
                                           <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
                                           <input name="language" type="hidden" value="uk" />
                                           <button type="submit" value="uk" class="lang p-0 m-0 btn btn-link d-flex justify-content-end mt-3">UA</button>
                                         </form>
-                                        <form action="{% url 'set_language' %}" class="hiddenXS" method="post">
+                                        <form action="{% url 'set_language' %}" class="hiddenXL" method="post">
                                           {% csrf_token %}
                                           <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
                                           <input name="language" type="hidden" value="ru" />
