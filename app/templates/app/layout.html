@@ -84,26 +84,13 @@
             cursor: pointer;
             font-weight: bold;
             letter-spacing: 0;
-            overflow: hidden;
-            background: linear-gradient(to right, rgb(242, 99, 66), rgb(242, 99, 66) 50%, rgb(2, 68, 58) 50%);
-            background: -webkit-linear-gradient(to right, rgb(242, 99, 66), rgb(242, 99, 66) 50%, rgb(2, 68, 58) 50%);
-            background: -o-linear-gradient(to right, rgb(242, 99, 66), rgb(242, 99, 66) 50%, rgb(2, 68, 58) 50%);
-            background: -moz-linear-gradient(to right, rgb(242, 99, 66), rgb(242, 99, 66) 50%, rgb(2, 68, 58) 50%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: rgba(255,255,255,0.001);
-            background-size: 200% 100%;
-            background-position: 100%;
-            transition: background-position 275ms ease;
-            -webkit-transition: background-position 275ms ease;
-            -moz-transition: background-position 275ms ease;
-            -o-transition: background-position 275ms ease;
-            text-decoration: none;
+            color: rgb(2, 68, 58);
+            text-decoration:none;
         }
-            .icon_info:hover {
-                background-position: 0 100%;
-                background-position-x: 0;
-                background-position-y: 100%;
+            .icon_info:hover > span {
+                color: rgb(242, 99, 66)
             }
+
         .popover-header {
 
             color: white;
@@ -491,7 +478,7 @@
                                     <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" href="{% url 'plans' %}">{% trans 'Планировка' %}</a>
                                     <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" target="_blank" href="https://zhilstroj-2.ua/kontakty/">{% trans 'Контакты' %}</a>
                                     <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" target="_blank" href="https://zhilstroj-2.ua/kompaniya-segodnya/">{% trans 'О компании' %}</a>
-                                    <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" href="#">{% trans 'Коммерческая недвижимость' %}</a>
+                                    <a style="pointer-events: none;" class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" href="#">{% trans 'Коммерческая недвижимость' %}</a>
                                 </div>
                             </div>
                         </div>
