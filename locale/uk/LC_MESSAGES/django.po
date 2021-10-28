@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-27 18:46+0300\n"
+"POT-Creation-Date: 2021-10-28 11:08+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -197,10 +197,10 @@ msgstr "Безпека"
 
 #: .\app\templates\app\index.html:110
 msgid ""
-"Для того, чтобы обезопасить здание холле здания размещены консьержем, "
-"установлена круглосуточная охрана и система видеонаблюдения."
+"Для того, чтобы обезопасить здание в холле размещен консьерж, установлена "
+"круглосуточная охрана и система видеонаблюдения."
 msgstr ""
-"Для того, щоб убезпечити будівлю холі будівлі розміщені консьєржем, "
+"Для того, щоб убезпечити будівлю в холі будівлі розміщен консьєрж, "
 "встановлена цілодобова охорона та система відеоспостереження."
 
 #: .\app\templates\app\index.html:112
@@ -393,7 +393,7 @@ msgstr ""
 msgid "Подобрать квартиру"
 msgstr "Підібрати квартиру"
 
-#: .\app\templates\app\index.html:245 .\app\templates\app\layout.html:523
+#: .\app\templates\app\index.html:245 .\app\templates\app\layout.html:522
 #, fuzzy
 #| msgid "© ОДО “ЖИЛСТРОЙ-2”"
 msgid "© ОДО \"ЖИЛСТРОЙ-2"
@@ -455,52 +455,52 @@ msgstr "Транспортні мережі"
 msgid "Учебные заведения"
 msgstr "Навчальні заклади"
 
-#: .\app\templates\app\layout.html:457
+#: .\app\templates\app\layout.html:456
 msgid "ЖИЛСТРОЙ-2"
 msgstr "ЖИТЛОБУД-2"
 
-#: .\app\templates\app\layout.html:469
+#: .\app\templates\app\layout.html:468
 msgid "ПРО КОМПЛЕКС"
 msgstr "ПРО КОМПЛЕКС"
 
-#: .\app\templates\app\layout.html:470
+#: .\app\templates\app\layout.html:469
 msgid "ПЛАНИРОВКА"
 msgstr "ПЛАНУВАННЯ"
 
-#: .\app\templates\app\layout.html:471
+#: .\app\templates\app\layout.html:470
 msgid "КВАРТИРЫ"
 msgstr "КВАРТИРИ"
 
-#: .\app\templates\app\layout.html:472
+#: .\app\templates\app\layout.html:471
 msgid "РАСПОЛОЖЕНИЕ"
 msgstr "РОЗМІЩЕННЯ"
 
-#: .\app\templates\app\layout.html:505 .\app\templates\app\layout.html:527
+#: .\app\templates\app\layout.html:504 .\app\templates\app\layout.html:526
 #: .\app\templates\app\news.html:7
 msgid "Новости"
 msgstr "Новини"
 
-#: .\app\templates\app\layout.html:506
+#: .\app\templates\app\layout.html:505
 msgid "Планировка"
 msgstr "Планування"
 
-#: .\app\templates\app\layout.html:507 .\app\templates\app\layout.html:528
+#: .\app\templates\app\layout.html:506 .\app\templates\app\layout.html:527
 msgid "Контакты"
 msgstr "Контакти"
 
-#: .\app\templates\app\layout.html:508 .\app\templates\app\layout.html:529
+#: .\app\templates\app\layout.html:507 .\app\templates\app\layout.html:528
 msgid "О компании"
 msgstr "Про компанію"
 
-#: .\app\templates\app\layout.html:509
+#: .\app\templates\app\layout.html:508
 msgid "Коммерческая недвижимость"
 msgstr "Комерційна нерухомість"
 
-#: .\app\templates\app\layout.html:532
+#: .\app\templates\app\layout.html:531
 msgid "г. Харьков, ул. Космическая,12"
 msgstr "м. Харків, вул. Космічна,12"
 
-#: .\app\templates\app\layout.html:533
+#: .\app\templates\app\layout.html:532
 msgid "Время работы с 9:00 до 18:00"
 msgstr "Час роботи з 9:00 до 18:00"
 

@@ -22,8 +22,7 @@
     <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
    
-    <style>
-       
+    <style>      
         #loading {
             position: fixed;
             display: flex;
@@ -66,10 +65,8 @@
             background: -webkit-linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
             background: -o-linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
             background: -moz-linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
-            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: rgba(255,255,255,0.001);
-            color: rgba(255,255,255,0.001);
             background-size: 200% 100%;
             background-position: 100%;
             transition: background-position 275ms ease;
@@ -78,12 +75,10 @@
             -o-transition: background-position 275ms ease;
             text-decoration: none;
         }
-
             a:not(.send, .menu):hover {
                 background-position: 0 100%;
                 background-position-x: 0;
                 background-position-y: 100%;
-                color: rgba(255,255,255,0.001);
             }
         .icon_info {
             cursor: pointer;
@@ -94,10 +89,8 @@
             background: -webkit-linear-gradient(to right, rgb(242, 99, 66), rgb(242, 99, 66) 50%, rgb(2, 68, 58) 50%);
             background: -o-linear-gradient(to right, rgb(242, 99, 66), rgb(242, 99, 66) 50%, rgb(2, 68, 58) 50%);
             background: -moz-linear-gradient(to right, rgb(242, 99, 66), rgb(242, 99, 66) 50%, rgb(2, 68, 58) 50%);
-            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: rgba(255,255,255,0.001);
-            color: rgba(255,255,255,0.001);
             background-size: 200% 100%;
             background-position: 100%;
             transition: background-position 275ms ease;
@@ -110,7 +103,6 @@
                 background-position: 0 100%;
                 background-position-x: 0;
                 background-position-y: 100%;
-                color: rgba(255,255,255,0.001);
             }
         .popover-header {
 
@@ -130,10 +122,8 @@
             background: -webkit-linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
             background: -o-linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
             background: -moz-linear-gradient(to right, white, white 50%, rgb(209, 195, 180) 50%);
-            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: rgba(255,255,255,0.001);
-            color: rgba(255,255,255,0.001);
             background-size: 200% 100%;
             background-position: 100%;
             transition: background-position 275ms ease;
@@ -147,7 +137,6 @@
                 background-position: 0 100%;
                 background-position-x: 0;
                 background-position-y: 100%;
-                color: rgba(255,255,255,0.001);
             }
 
         .menu {
@@ -157,10 +146,8 @@
             background: -webkit-linear-gradient(to right, rgb(2, 68, 58), rgb(2, 68, 58) 50%, white 50%);
             background: -o-linear-gradient(to right, rgb(2, 68, 58), rgb(2, 68, 58) 50%, white 50%);
             background: -moz-linear-gradient(to right, rgb(2, 68, 58), rgb(2, 68, 58) 50%, white 50%);
-            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: rgba(255,255,255,0.001);
-            color: rgba(255,255,255,0.001);
             background-size: 200% 100%;
             background-position: 100%;
             transition: background-position 275ms ease;
@@ -173,7 +160,6 @@
                 background-position: 0 100%;
                 background-position-x: 0;
                 background-position-y: 100%;
-                color:rgba(255,255,255,0.001);
             }
 
         .logo {
@@ -450,7 +436,6 @@
                     <div class="d-flex justify-content-center col-9 col-xl-2 col-md-3 p-0 border-end orange-bg border-yellow">
                         <a class="m-1 logo d-flex align-items-center" href="{% url 'home' %}"><img style="width: 160px;" src="{% static 'app/img/cmprsd/22_logo_white.png' %}" class="img-fluid" alt="..."></a>
                     </div>
-
                     <div class="hiddenXS hideXSborder col-xl-8 col-md-7 border-end p-0 green-bg yellow-tx border-yellow">
                         <div class="col-12 p-0 align-items-center d-flex justify-content-center border-bottom border-yellow" style="height: 50%;">
                             <span class="hiddenSize col-1" style="height:100%;"></span>
