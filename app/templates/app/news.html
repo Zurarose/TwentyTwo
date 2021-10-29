@@ -2,6 +2,7 @@
 {% block content %}
 {% load static %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <div class="container-fluid yellow-bg" style="min-height: 100vh;">
     <div class="col-12 d-flex justify-content-center mb-2">
         <div id="apartment" class="mt-xl-2 mt-md-2 mt-2 col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">{% trans 'Новости' %}</p></div>
@@ -13,7 +14,11 @@
         <div class="col-xl-4 col-md-6 col-12 p-2 card mb-3" data-aos="fade-down" style="background: rgba(255,255,255,0); border:none;">
           <img src="{{row.image.url|safe}}" class="card-img-top shadow-lg" alt="...">
           <div class="card-body green-bg">
+            {% if LANGUAGE_CODE == "ru-ru" %}
             <h5 class="card-title yellow-tx">{{row.title|safe}}</h5>
+            {% else %}
+            <h5 class="card-title yellow-tx">{{row.title_ua|safe}}</h5>
+            {% endif %}
           </div>
             <button type="button" class="btn orange-bg white-tx" data-bs-toggle="modal" data-bs-target="#Modal{{row.pk|safe}}">
               <p class="p-0 m-0 h5 shadow-lg ">{% trans 'Подробнее' %}</p>
@@ -24,12 +29,20 @@
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header orange-bg">
+                {% if LANGUAGE_CODE == "ru-ru" %}
                 <h5 class="modal-title white-tx" id="ModalLabel{{row.pk|safe}}">{{row.title|safe}}</h5>
+                {% else %}
+                <h5 class="modal-title white-tx" id="ModalLabel{{row.pk|safe}}">{{row.title_ua|safe}}</h5>
+                {% endif %}
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body p-0 yellow-bg">
                 <img src="{{row.image.url}}" class="col-12 p-0" alt="...">
+                {% if LANGUAGE_CODE == "ru-ru" %}
                 <p class="pt-3 px-3 green-tx" align="justify">{{row.text|safe|linebreaksbr}}</p>
+                {% else %}
+                <p class="pt-3 px-3 green-tx" align="justify">{{row.text_ua|safe|linebreaksbr}}</p>
+                {% endif %}
               </div>
               <div class="modal-footer green-bg">
                 <button type="button" class="btn orange-bg white-tx" data-bs-dismiss="modal">{% trans 'Закрыть' %}</button>
