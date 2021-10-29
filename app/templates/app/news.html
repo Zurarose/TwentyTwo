@@ -28,11 +28,11 @@
         <div class="modal fade" id="Modal{{row.pk|safe}}" tabindex="-1" aria-labelledby="ModalLabel{{row.pk|safe}}" aria-hidden="true">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
-              <div class="modal-header orange-bg">
+              <div class="modal-header green-bg" style="border:none">
                 {% if LANGUAGE_CODE == "ru-ru" %}
-                <h5 class="modal-title white-tx" id="ModalLabel{{row.pk|safe}}">{{row.title|safe}}</h5>
+                <h5 class="modal-title yellow-tx" id="ModalLabel{{row.pk|safe}}">{{row.title|safe}}</h5>
                 {% else %}
-                <h5 class="modal-title white-tx" id="ModalLabel{{row.pk|safe}}">{{row.title_ua|safe}}</h5>
+                <h5 class="modal-title yellow-tx" id="ModalLabel{{row.pk|safe}}">{{row.title_ua|safe}}</h5>
                 {% endif %}
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
