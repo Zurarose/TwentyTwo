@@ -269,7 +269,7 @@
                     </div>
                     <div class="mb-3 border-bottom col-12">
                         <label for="inputPhone" class="form-label yellow-tx">{% trans 'Номер телефона' %}</label>
-                        <input type="text" class="contact_info yellow-tx form-control border-0 px-1 green-bg col-12" id="inputPhone">
+                        <input type="text"  class="contact_info yellow-tx form-control border-0 px-1 green-bg col-12" id="phone">
                     </div>
                     <div class="col-12 pt-4 d-flex justify-content-end">
                         <a class="h4 send">{% trans 'ОТПРАВИТЬ' %}</a>
@@ -332,7 +332,11 @@
           return new bootstrap.Popover(popoverTriggerEl)
         })      
 </script>
-
+<script>
+    $(document).ready(function () {
+        $("#phone").inputmask({ "mask": "+380(999)999-9999" }); //specifying options
+    });
+</script>
 <script>
     window.addEventListener('message', function (message) {
         console.log(message.data);
