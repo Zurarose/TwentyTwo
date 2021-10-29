@@ -98,6 +98,7 @@
     <Content Include="app\static\app\scripts\jquery-3.6.0.js" />
     <Content Include="app\templates\app\plans.html" />
     <Content Include="app\templates\app\news.html" />
+    <Content Include="db.sqlite3" />
     <Content Include="locale\uk\LC_MESSAGES\django.mo" />
     <Content Include="locale\uk\LC_MESSAGES\django.po" />
     <Content Include="Procfile" />
