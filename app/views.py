@@ -5,11 +5,13 @@ Definition of views.
 from datetime import datetime
 from django.shortcuts import render, redirect
 from django.http import HttpRequest
-from django.views.decorators.clickjacking import xframe_options_exempt
+#from django.views.decorators.clickjacking import xframe_options_exempt
 from django.contrib import messages
 from .models import *
+from django.views.decorators.gzip import gzip_page
 
-@xframe_options_exempt
+#@xframe_options_exempt
+@gzip_page
 def home(request):
     """Renders the home page."""
     return render(

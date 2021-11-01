@@ -58,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.gzip.GZipMiddleware',
 ]
 
 #AmazonS3
@@ -82,10 +83,10 @@ else:
     MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 #Frame
-X_FRAME_OPTIONS = 'SAMEORIGIN'
-X_FRAME_OPTIONS = 'ALLOW-FROM https://chessgrid.developerit.systems'
-CSRF_COOKIE_SECURE = True
-CSRF_COOKIE_SAMESITE = None
+#X_FRAME_OPTIONS = 'SAMEORIGIN'
+#X_FRAME_OPTIONS = 'ALLOW-FROM https://chessgrid.developerit.systems'
+#CSRF_COOKIE_SECURE = True
+#CSRF_COOKIE_SAMESITE = None
 
 ROOT_URLCONF = 'TwentyTwo.urls'
 
