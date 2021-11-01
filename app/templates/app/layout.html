@@ -7,22 +7,15 @@
     <title>TwentyTwo</title>
     {% load static %}
     {% load i18n %}
-    <script src="{% static 'app/scripts/jquery-3.6.0.js' %}"></script>
-    <script src="{% static 'app/scripts/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'app/scripts/respond.js' %}"></script>
-    <script src="{% static 'app/scripts/jquery.inputmask.min.js' %}"></script>   
+    <script src="{% static 'app/scripts/jquery-3.6.0.min.js' %}"></script>    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/3ad61f7b57.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="{% static 'app/img/cmprsd/22_logo_ico.png' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />   
-
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-    <!--<link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />-->
     <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
-    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
-   
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />-->    
+    <!--<script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>-->
+    <!--<script src="{% static 'app/scripts/respond.js' %}"></script>-->  
     <style>      
         #loading {
             position: fixed;
@@ -425,7 +418,7 @@
         <nav class="p-0" id="header">
                 <div class="row shadow-sm m-0 p-0 border-bottom border-yellow">
                     <div class="d-flex justify-content-center  align-items-center col-9 col-xl-2 col-md-3 p-0 border-end orange-bg border-yellow">
-                        <a class="m-1 logo" href="{% url 'home' %}"><img style="width: 160px;" src="{% static 'app/img/cmprsd/22_logo_white.png' %}" class="img-fluid" alt="..."></a>
+                        <a class="m-1 logo" href="{% url 'home' %}"><img style="width: 160px;" src="{% static 'app/img/22_logo_white.png' %}" class="img-fluid" alt="..."></a>
                     </div>
                     <div class="hiddenXS hideXSborder col-xl-8 col-md-7 border-end p-0 green-bg yellow-tx border-yellow">
                         <div class="col-12 p-0 align-items-center d-flex justify-content-center border-bottom border-yellow" style="height: 50%;">
@@ -515,7 +508,7 @@
     <footer class="py-3 green-bg d-flex justify-content-center">
         <div class="col-xl-10 col-md-11 col-12 px-xl-0 px-md-0 px-1 d-flex flex-row">
             <div class="col-7 col-md-3 col-xl-3 pe-md-2 d-flex flex-column justify-content-start" data-aos="fade-right" data-aos-offset="0">
-                <a class="mt-2 mt-xl-0 mt-md-0 mb-1 d-inline-blockjustify-content-start" href="{% url 'home' %}"><img style="width: 180px; max-height:68px;" src="{% static 'app/img/sup_items/22_logo_light.png' %}" class="img-fluid" alt="..."></a>
+                <a class="mt-2 mt-xl-0 mt-md-0 mb-1 d-inline-blockjustify-content-start" href="{% url 'home' %}"><img style="width: 180px; max-height:68px;" src="{% static 'app/img/22_logo_light.png' %}" class="img-fluid" alt="..."></a>
                 <a class="resp_text d-inline-block justify-content-start m-0 h5 text-start" href="https://zhilstroj-2.ua/complexes/mfk22/" target="_blank">{% trans '© ОДО "ЖИЛСТРОЙ-2' %}"</a>
             </div>
 

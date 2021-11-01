@@ -10,13 +10,13 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="3500">
-            <img src="{% static 'app/img/cmprsd/1-min.jpg' %}" class="d-block w-100" alt="...">
+            <img src="{% static 'app/img/1.jpg' %}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="3500">
-            <img src="{% static 'app/img/cmprsd/2-min.jpg' %}" class="d-block w-100" alt="...">
+            <img src="{% static 'app/img/2.jpg' %}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="3500">
-            <img src="{% static 'app/img/cmprsd/visual_1-min.jpg' %}" class="d-block w-100" alt="...">
+            <img src="{% static 'app/img/visual_1.jpg' %}" class="d-block w-100" alt="...">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -192,10 +192,10 @@
             <div id="carouselExampleIndicators_center" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="3500">
-                        <img src="{% static 'app/img/cmprsd/visual_2-min.jpg' %}" class="d-block w-100" alt="...">
+                        <img src="{% static 'app/img/visual_2.jpg' %}" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item" data-bs-interval="3500">
-                        <img src="{% static 'app/img/cmprsd/visual_3-min.jpg' %}" class="d-block w-100" alt="...">
+                        <img src="{% static 'app/img/visual_3.jpg' %}" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators_center" data-bs-slide="prev">
@@ -229,7 +229,7 @@
             <div class="modal-content">
                 <div class="modal-header col-12 p-0" style="min-height:60px;">                 
                     <div class="d-flex justify-content-center col-2 p-0 border-end orange-bg border-yellow" style="height:100%;">
-                        <a class="m-1 logo d-flex align-items-center" href="{% url 'home' %}"><img style="width: 160px;" src="{% static 'app/img/cmprsd/22_logo_white.png' %}" class="img-fluid" alt="..."></a>
+                        <a class="m-1 logo d-flex align-items-center" href="{% url 'home' %}"><img style="width: 160px;" src="{% static 'app/img/22_logo_white.png' %}" class="img-fluid" alt="..."></a>
                     </div>
                     <div class="col-10 green-bg d-flex justify-content-end align-items-center" style="height:100%;">
                         <button type="button" class="btn-close btn-close-white me-5" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -241,7 +241,7 @@
                 <div class="modal-footer green-bg d-flex justify-content-center">
                      <div class="col-xl-10 col-md-11 col-12 px-xl-0 px-md-0 px-1 d-flex flex-row">
                         <div class="col-7 col-md-5 col-xl-5 d-flex flex-column justify-content-start">
-                            <a class="hiddenSize hiddenXL mt-1 mt-xl-0 mt-md-0 mb-1 d-flex justify-content-start" href="{% url 'home' %}"><img style="width: 180px; max-height:68px;" src="{% static 'app/img/sup_items/22_logo_light.png' %}" class="img-fluid" alt="..."></a>
+                            <a class="hiddenSize hiddenXL mt-1 mt-xl-0 mt-md-0 mb-1 d-flex justify-content-start" href="{% url 'home' %}"><img style="width: 180px; max-height:68px;" src="{% static 'app/img/22_logo_light.png' %}" class="img-fluid" alt="..."></a>
                             <a class="resp_text d-flex justify-content-start align-items-end m-0 h5 text-center" href="https://zhilstroj-2.ua/complexes/mfk22/" target="_blank">{% trans '© ОДО "ЖИЛСТРОЙ-2' %}"</a>
                         </div>              
                         <div class="col-5 col-md-7 col-xl-7 d-flex flex-column flex-md-row flex-xl-row justify-content-end">
@@ -304,6 +304,10 @@
 {% endblock %}
 
 {% block scripts %}
+<script src="{% static 'app/scripts/jquery.inputmask.min.js' %}"></script>   
+<script src="https://kit.fontawesome.com/3ad61f7b57.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="{% static 'app/scripts/bootstrap.bundle.min.js' %}"></script>
 <script>
     $(window).on('load', function () {
         $('#loading').hide();
@@ -327,41 +331,43 @@
             $(".icon_info").attr("data-bs-placement", "top");            
         }                                 
     });
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-          return new bootstrap.Popover(popoverTriggerEl)
-        })      
+   
 </script>
 <script>
     $(document).ready(function () {
         $("#phone").inputmask({ "mask": "+380(999)999-9999" }); //specifying options
     });
-</script>
-<script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
     window.addEventListener('message', function (message) {
         console.log(message.data);
         $('#iframeModalCompleN').prop('src', message.data)
         var Modal = new bootstrap.Modal(document.getElementById('frameModal'), {
             keyboard: false
         });
-        Modal.show(); 
+        Modal.show();
     });
 
     $(document).scroll(function () {
-    var y = $(this).scrollTop();
-    if (y > 700) {
-        $('#toUp').fadeIn();
-        $('#toUp').css("visibility", "visible");
-    } else {
-        $('#toUp').fadeOut();
+        var y = $(this).scrollTop();
+        if (y > 700) {
+            $('#toUp').fadeIn();
+            $('#toUp').css("visibility", "visible");
+        } else {
+            $('#toUp').fadeOut();
         }
         $('.icon_info').popover("hide");
-        
+
     });
     $("#toTop").click(function () {
         window.scrollTo(0, 0);
     });
-
+    /*document.addEventListener('aos:in:info', ({ detail }) => {
+       //window.setTimeout($('.icon_info').popover("show"), 600);
+       //console.log('animated in', detail);
+   });*/
 </script>
 <script type="text/javascript">
     var map;
@@ -550,10 +556,4 @@
     });
 </script>
 
-<script>
-    /*document.addEventListener('aos:in:info', ({ detail }) => {
-        //window.setTimeout($('.icon_info').popover("show"), 600);
-        //console.log('animated in', detail);
-    });*/
-</script>
 {% endblock %}
