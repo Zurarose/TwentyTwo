@@ -9,7 +9,7 @@
     {% load i18n %}
     <script src="{% static 'app/scripts/jquery-3.6.0.min.js' %}"></script>    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="shortcut icon" href="{% static 'app/img/cmprsd/22_logo_ico.png' %}"/>
+    <link rel="shortcut icon" href="{% static 'app/img/22_icon.png' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />   
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
@@ -186,13 +186,11 @@
         }
 
         body {
-            /* background-color:rgb(209, 195, 180) !important;
-           background-image: url('../static/app/img/sup_items/bg.png');
-         */
-            font-family: 'Montserrat', sans-serif;
-            background-image: url('../static/app/img/sup_items/visual_4.jpg');
+            background-image: url('../static/app/img/visual_4.png');
             background-repeat: no-repeat;
             background-size: 100% 100%;
+            font-family: 'Montserrat';
+            background-color: rgb(2, 68, 58);
         }
             body.modal-open {
                 overflow: visible !important;
@@ -273,8 +271,9 @@
         /* width */
         ::-webkit-scrollbar {
             width: 10px;
+            background:rgb(209, 195, 180);
         }
-
+        
         /* Track */
         ::-webkit-scrollbar-track {
             box-shadow: inset 0 0 5px white;
@@ -405,7 +404,7 @@
         }
     </style>
 </head>
-<body class="p-0 yellow-bg mb-0 container-fluid p-0">
+<body class="p-0 mb-0 container-fluid">
     <div id="loading">
             <div class="text-center">
                 <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
@@ -413,7 +412,6 @@
                 </div>
             </div>
         </div>
-
     <div class="">      
         <nav class="p-0" id="header">
                 <div class="row shadow-sm m-0 p-0 border-bottom border-yellow">
@@ -475,23 +473,23 @@
                             </div>
                             <div class="offcanvas-body">
                                 <div class="h-100">
-                                    <div class="col-12 green-bg h-70">
+                                    <div class="col-12 green-bg">
                                         <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" href="{% url 'news' %}">{% trans 'Новости' %}</a>
                                         <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" href="{% url 'plans' %}">{% trans 'Планировка' %}</a>
                                         <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" target="_blank" href="https://zhilstroj-2.ua/kontakty/">{% trans 'Контакты' %}</a>
                                         <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" target="_blank" href="https://zhilstroj-2.ua/kompaniya-segodnya/">{% trans 'О компании' %}</a>
                                         <a style="pointer-events: none;" class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" href="#">{% trans 'Коммерческая недвижимость' %}</a>
                                     </div>
-                                    <div class="text-center h-30 col-12 d-flex justify-content-evenly flex-row align-items-end">
+                                    <div class="text-center col-12 d-flex justify-content-evenly mt-5 flex-row align-items-end">
                                         <form action="{% url 'set_language' %}" class="hiddenXL" method="post">
                                           {% csrf_token %}
-                                          <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+                                          <input name="next" type="hidden" value="{{ request.get_full_path }}" />
                                           <input name="language" type="hidden" value="uk" />
                                           <button type="submit" value="uk" class="lang p-0 m-0 btn btn-link d-flex justify-content-end mt-3">UA</button>
                                         </form>
                                         <form action="{% url 'set_language' %}" class="hiddenXL" method="post">
                                           {% csrf_token %}
-                                          <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+                                          <input name="next" type="hidden" value="{{ request.get_full_path }}" />
                                           <input name="language" type="hidden" value="ru" />
                                           <button type="submit" value="ru" class="lang p-0 m-0 btn btn-link d-flex justify-content-end mt-3">RU</button>
                                         </form>
@@ -502,17 +500,17 @@
                     </div>
                 </div>
         </nav>
-            {% block content %}
-            {% endblock %}
+        {% block content %}
+        {% endblock %}
     </div>
-    <footer class="py-3 green-bg d-flex justify-content-center">
+    <footer class="py-3 green-bg border-top border-yellow d-flex justify-content-center">
         <div class="col-xl-10 col-md-11 col-12 px-xl-0 px-md-0 px-1 d-flex flex-row">
-            <div class="col-7 col-md-3 col-xl-3 pe-md-2 d-flex flex-column justify-content-start" data-aos="fade-right" data-aos-offset="0">
-                <a class="mt-2 mt-xl-0 mt-md-0 mb-1 d-inline-blockjustify-content-start" href="{% url 'home' %}"><img style="width: 180px; max-height:68px;" src="{% static 'app/img/22_logo_light.png' %}" class="img-fluid" alt="..."></a>
+            <div class="col-7 col-md-3 col-xl-3 d-flex flex-column justify-content-start" data-aos="fade-right" data-aos-offset="0">
+                <a class="mt-2 mt-xl-0 mt-md-0 mb-1 d-inline-block justify-content-start" href="{% url 'home' %}"><img style="width: 180px; max-height:68px;" src="{% static 'app/img/22_logo_yellow.png' %}" class="img-fluid" alt="..."></a>
                 <a class="resp_text d-inline-block justify-content-start m-0 h5 text-start" href="https://zhilstroj-2.ua/complexes/mfk22/" target="_blank">{% trans '© ОДО "ЖИЛСТРОЙ-2' %}"</a>
             </div>
 
-            <div class="hiddenXS col-2 d-flex flex-column">
+            <div class="hiddenXS hidden col-2 d-flex flex-column">
                 <a class="col-12 d-flex justify-content-start align-items-center pb-0 pb-xl-2 pb-md-2" href="{% url 'news' %}">{% trans 'Новости' %}</a>
                 <a class="col-12 d-flex justify-content-start align-items-center py-0 py-xl-1 py-md-1" target="_blank" href="https://zhilstroj-2.ua/kontakty/">{% trans 'Контакты' %}</a>
                 <a class="col-12 d-flex justify-content-start align-items-center pt-0 mt-xl-1 pt-md-1" target="_blank" href="https://zhilstroj-2.ua/kompaniya-segodnya/">{% trans 'О компании' %}</a>
