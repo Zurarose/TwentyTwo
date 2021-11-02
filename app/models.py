@@ -5,6 +5,9 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py migrate --run-syncdb
 
+django-admin makemessages --locale=uk --extension=html
+
+django-admin compilemessages
 """
 
 from django.db import models

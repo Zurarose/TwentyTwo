@@ -5,7 +5,7 @@
 {% get_current_language as LANGUAGE_CODE %}
 <div class="container-fluid yellow-bg" style="min-height: 100vh;">
     <div class="col-12 d-flex justify-content-center mb-2">
-        <div id="apartment" class="mt-xl-2 mt-md-2 mt-2 col-10 p-2 green-tx"><p style="text-decoration:underline" class="h2 text-center">{% trans 'Новости' %}</p></div>
+        <div id="apartment" class="mt-xl-2 mt-md-2 mt-2 col-10 p-2 green-tx"><p class="h2 text-center">{% trans 'Новости' %}</p></div>
     </div>
 
     <div class="h-100 d-flex d-flex justify-content-start y flex-row flex-wrap col-12 p-0"> 
@@ -57,6 +57,9 @@
 {% endblock %}
 
 {% block scripts %}
+<script src="https://kit.fontawesome.com/3ad61f7b57.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="{% static 'app/scripts/bootstrap.bundle.min.js' %}"></script>
 <script>
     //On load
     $(window).on('load', function () {

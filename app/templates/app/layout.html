@@ -16,7 +16,7 @@
     <!--<link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />-->    
     <!--<script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>-->
     <!--<script src="{% static 'app/scripts/respond.js' %}"></script>-->  
-    <style>      
+    <style>  
         #loading {
             position: fixed;
             display: flex;
@@ -268,6 +268,10 @@
                 color: white;
             }
 
+        .lang:focus {
+                -webkit-appearance: none;
+                box-shadow: none !important;
+            }
         /* width */
         ::-webkit-scrollbar {
             width: 10px;
@@ -347,18 +351,15 @@
             .resp_text {
                 font-size: 0.9em;
             }
-
             .hiddenXS {
                 width: 0px !important;
                 visibility: hidden !important;
                 height: 0px !important;
                 display:none;
             }
-
             .hideXSborder {
                 border: none !important;
             }
-
             .hideXordBorder {
                 border-left: none !important;
                 border-right: none !important;
@@ -385,7 +386,6 @@
                 height: 15.2% !important;
                 text-align: center;
             }
-
             #frame {
                 height: 25em !important;
                 width: 40em !important;
@@ -399,8 +399,7 @@
             }
             .memu-items {
                 text-align: center;
-            }         
-
+            }       
         }
     </style>
 </head>
@@ -422,7 +421,7 @@
                         <div class="col-12 p-0 align-items-center d-flex justify-content-center border-bottom border-yellow" style="height: 50%;">
                             <span class="hiddenSize col-1" style="height:100%;"></span>
                             <span class="col-10 align-items-center d-flex justify-content-center" style="height:100%;">
-                                <a class="d-inline-block m-0 h5 text-center" href="https://zhilstroj-2.ua/complexes/mfk22/" target="_blank">{% trans 'ЖИЛСТРОЙ-2' %}</a>
+                                <a class="d-inline-block m-0 h5 text-center" href="https://zhilstroj-2.ua/complexes/mfk22/" target="_blank">{% trans "ЖИЛСТРОЙ-2" %}</a>
                             </span>
                             <form action="{% url 'set_language' %}" class="col-xl-1 col-md-2 align-items-center d-flex justify-content-center  border-start border-yellow" style="height:100%;"  method="post">
                               {% csrf_token %}
@@ -507,7 +506,7 @@
         <div class="col-xl-10 col-md-11 col-12 px-xl-0 px-md-0 px-1 d-flex flex-row">
             <div class="col-7 col-md-3 col-xl-3 d-flex flex-column justify-content-start" data-aos="fade-right" data-aos-offset="0">
                 <a class="mt-2 mt-xl-0 mt-md-0 mb-1 d-inline-block justify-content-start" href="{% url 'home' %}"><img style="width: 180px; max-height:68px;" src="{% static 'app/img/22_logo_yellow.png' %}" class="img-fluid" alt="..."></a>
-                <a class="resp_text d-inline-block justify-content-start m-0 h5 text-start" href="https://zhilstroj-2.ua/complexes/mfk22/" target="_blank">{% trans '© ОДО "ЖИЛСТРОЙ-2' %}"</a>
+                <a class="resp_text d-inline-block justify-content-start m-0 h5 text-start" href="https://zhilstroj-2.ua/complexes/mfk22/" target="_blank">{% trans "© ОДО «ЖИЛСТРОЙ-2»" %}</a>
             </div>
 
             <div class="hiddenXS hidden col-2 d-flex flex-column">
