@@ -61,6 +61,13 @@ MIDDLEWARE = [
     'django.middleware.gzip.GZipMiddleware',
 ]
 
+GZIP_CONTENT_TYPES = (
+    'text/css',
+    'application/javascript',
+    'application/x-javascript',
+    'text/javascript'
+)
+
 #AmazonS3
 USE_S3 = 'TRUE'
 
