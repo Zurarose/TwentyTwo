@@ -90,6 +90,7 @@
     <Content Include="app\static\app\scripts\bootstrap.min.js.map" />
     <Content Include="app\static\app\scripts\jquery-3.6.0.min.js" />
     <Content Include="app\static\app\scripts\jquery.inputmask.min.js" />
+    <Content Include="app\static\app\scripts\lazysizes.min.js" />
     <Content Include="app\templates\app\contacts.html" />
     <Content Include="app\templates\app\plans.html" />
     <Content Include="app\templates\app\news.html" />

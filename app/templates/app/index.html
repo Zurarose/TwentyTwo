@@ -13,10 +13,10 @@
             <img src="{% static 'app/img/1.webp' %}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="3500">
-            <img src="{% static 'app/img/2.webp' %}" class="d-block w-100" alt="...">
+            <img data-src="{% static 'app/img/2.webp' %}" class="lazyload d-block w-100" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="3500">
-            <img src="{% static 'app/img/visual_1.webp' %}" class="d-block w-100" alt="...">
+            <img data-src="{% static 'app/img/visual_1.webp' %}" class="lazyload d-block w-100" alt="...">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -216,7 +216,7 @@
         </div>
         <div class="order-1 order-xl-2 col-xl-8 col-12">
             <a class="pop">
-                <img src="{% static 'app/img/visual_2.webp' %}" class="border-start border-yellow px-0 px-md-0 px-xl-4  d-block w-100" alt="...">
+                <img data-src="{% static 'app/img/visual_2.webp' %}" class="lazyload border-start border-yellow px-0 px-md-0 px-xl-4  d-block w-100" alt="...">
             </a>
         </div>
     </div>
@@ -226,7 +226,7 @@
     <div class="col-xl-9 col-12 d-flex flex-xl-row flex-column">        
         <div class="col-xl-6 col-12">
             <a class="pop">
-                <img src="{% static 'app/img/DVOR.webp' %}" class="border-end border-yellow px-0 px-md-0 px-xl-4 d-block w-100" alt="...">
+                <img data-src="{% static 'app/img/DVOR.webp' %}" class="lazyload border-end border-yellow px-0 px-md-0 px-xl-4 d-block w-100" alt="...">
             </a>
         </div>
         <div class="col-xl-6 col-12 p-0 yellow-tx d-flex align-items-center" id="planningtx2">
@@ -241,16 +241,16 @@
 <div class="col-12 d-flex justify-content-center green-bg" style="border:none;">
     <div class="col-xl-9 col-12 d-flex flex-xl-row flex-wrap my-4 ">
         <a class="pop p-2 col-xl-3 col-md-6 col-12">
-            <img src="{% static 'app/img/3_4.webp' %}" class="px-0 d-block w-100" alt="...">
+            <img data-src="{% static 'app/img/3_4.webp' %}" class="lazyload px-0 d-block w-100" alt="...">
         </a>
         <a class="pop p-2 col-xl-3 col-md-6 col-12">
-            <img src="{% static 'app/img/3_5.webp' %}" class="px-0 d-block w-100" alt="...">
+            <img data-src="{% static 'app/img/3_5.webp' %}" class="lazyload px-0 d-block w-100" alt="...">
         </a>
         <a class="pop p-2 col-xl-3 col-md-6 col-12">
-            <img src="{% static 'app/img/3_6.webp' %}" class="px-0 d-block w-100" alt="...">
+            <img data-src="{% static 'app/img/3_6.webp' %}" class="lazyload px-0 d-block w-100" alt="...">
         </a>
         <a class="pop p-2 col-xl-3 col-md-6 col-12">
-            <img src="{% static 'app/img/3_8.webp' %}" class="px-0 d-block w-100" alt="...">
+            <img data-src="{% static 'app/img/3_8.webp' %}" class="lazyload px-0 d-block w-100" alt="...">
         </a>
     </div>
     </div>
@@ -366,6 +366,7 @@
 
 {% block scripts %}
 <script src="{% static 'app/scripts/jquery.inputmask.min.js' %}"></script>
+<script src="{% static 'app/scripts/lazysizes.min.js' %}" async=""></script>
 <script src="https://kit.fontawesome.com/3ad61f7b57.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="{% static 'app/scripts/bootstrap.bundle.min.js' %}"></script>
