@@ -60,7 +60,7 @@ msgstr "Про комплекс"
 
 #: .\app\templates\app\index.html:43 .\app\templates\app\index.html:108
 msgid "Инфраструктура"
-msgstr "Архітектура"
+msgstr "Інфраструктура"
 
 #: .\app\templates\app\index.html:47 .\app\templates\app\index.html:112
 msgid "Архитектура"
