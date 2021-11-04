@@ -402,20 +402,7 @@
         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
             return new bootstrap.Popover(popoverTriggerEl)
-        })
-        $(function () {
-            window.addEventListener('message', function (message) {
-                if (message.data) {
-                    $('#iframeModalCompleN').prop('src', message.data)
-                    var Modal = new bootstrap.Modal(document.getElementById('frameModal'), {
-                        keyboard: false
-                    });
-                    console.log("here");
-                    Modal.show();
-                }
-            });
-
-        });
+        })       
         $(document).scroll(function () {
             var y = $(this).scrollTop();
             if (y > 700) {
@@ -616,6 +603,19 @@
         });
     });
 </script>
+<script>
+    $(function () {
+        window.addEventListener('message', function (message) {
+            if (message.data) {
+                $('#iframeModalCompleN').prop('src', message.data)
+                var Modal = new bootstrap.Modal(document.getElementById('frameModal'), {
+                    keyboard: false
+                });
+                Modal.show();
+            }
+        });
+    });
 
+</script>
 
 {% endblock %}
