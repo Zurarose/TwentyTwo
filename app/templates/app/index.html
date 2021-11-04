@@ -285,7 +285,7 @@
             </div>
         </div>
 
-        <div class="modal fade show" id="frameModal" tabindex="-1" aria-labelledby="frameModalLabel" aria-hidden="true">
+        <div class="modal fade" id="frameModal" tabindex="-1" aria-labelledby="frameModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
                     <div class="modal-header col-12 p-0" style="min-height: 60px;">
@@ -418,16 +418,12 @@
         });
         $(function () {
             window.addEventListener('message', function (message) {
-                if (message.data) {
-                    var pattern = new RegExp('^(https?:\\/\\/)?');
-                    var match = message.data.match(pattern);
-                    if (match.length != 0) {
-                        $('#iframeModalCompleN').prop('src', message.data)
-                        var Modal = new bootstrap.Modal(document.getElementById('frameModal'), {
-                            keyboard: false
-                        });
-                        Modal.show();
-                    }
+                if (message.data) {                  
+                    $('#iframeModalCompleN').prop('src', message.data)
+                    var Modal = new bootstrap.Modal(document.getElementById('frameModal'), {
+                        keyboard: false
+                    });
+                    Modal.show();                 
                 }
             });
         });
