@@ -28,6 +28,9 @@ def news(request):
 def plans(request):
     return render (request, 'app/plans.html')
 
+def contacts(request):
+    return render (request, 'app/contacts.html')
+
 def login(request):                  
     """Renders the home page."""
     if request.user.is_authenticated:

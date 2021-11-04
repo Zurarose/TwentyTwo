@@ -54,7 +54,7 @@
             .lang:hover {
                 color: rgb(242, 99, 66)
             }
-        a:not(.send, .menu, .icon_info) {
+        a:not(.send, .menu, .icon_info, .contact) {
             cursor: pointer;
             font-weight: bold;
             letter-spacing: 0;
@@ -468,10 +468,10 @@
                                 <div class="h-100">
                                     <div class="col-12 green-bg">
                                         <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" href="{% url 'news' %}">{% trans 'Новости' %}</a>
+                                        <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" href="{% url 'contacts' %}">{% trans 'Контакты' %}</a>
                                         <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" href="{% url 'plans' %}">{% trans 'Планировка' %}</a>
-                                        <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" target="_blank" href="https://zhilstroj-2.ua/kontakty/">{% trans 'Контакты' %}</a>
                                         <a class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" target="_blank" href="https://zhilstroj-2.ua/kompaniya-segodnya/">{% trans 'О компании' %}</a>
-                                        <a style="pointer-events: none;" class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" href="#">{% trans 'Коммерческая недвижимость' %}</a>
+                                        <a style="pointer-events: none; visibility:hidden" class="memu-items col-12 d-inline-block border-bottom my-2 py-3 text-center" href="#">{% trans 'Коммерческая недвижимость' %}</a>
                                     </div>
                                     <div class="text-center col-12 d-flex justify-content-evenly mt-5 flex-row align-items-end">
                                         <form action="{% url 'set_language' %}" method="post">
@@ -505,7 +505,7 @@
 
             <div class="hiddenXS hidden col-2 d-flex flex-column">
                 <a class="col-12 d-flex justify-content-start align-items-center pb-0 pb-xl-2 pb-md-2" href="{% url 'news' %}">{% trans 'Новости' %}</a>
-                <a rel="noreferrer" class="col-12 d-flex justify-content-start align-items-center py-0 py-xl-1 py-md-1" target="_blank" href="https://zhilstroj-2.ua/kontakty/">{% trans 'Контакты' %}</a>
+                <a class="col-12 d-flex justify-content-start align-items-center py-0 py-xl-1 py-md-1" href="{% url 'contacts' %}">{% trans 'Контакты' %}</a>
                 <a rel="noreferrer" class="col-12 d-flex justify-content-start align-items-center pt-0 mt-xl-1 pt-md-1" target="_blank" href="https://zhilstroj-2.ua/kompaniya-segodnya/">{% trans 'О компании' %}</a>
             </div>
             <div class="col-5 col-xl-4 col-md-5 px-1 d-flex flex-column">

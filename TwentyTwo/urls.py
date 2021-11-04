@@ -16,6 +16,7 @@ urlpatterns = [
     path('', views.home, name='home'),       
     path('news/', views.news, name='news'), 
     path('plans/', views.plans, name='plans'), 
+    path('contacts/', views.contacts, name='contacts'), 
     path('i18n/', include('django.conf.urls.i18n')),
 ]
 

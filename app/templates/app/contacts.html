@@ -1,0 +1,72 @@
+{% extends "app/layout.html" %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+<div class="container-fluid px-0 yellow-bg" style="min-height: 100vh;">
+    <div class="col-12 d-flex justify-content-center mb-2">
+        <div id="apartment" class="mt-xl-2 mt-md-2 mt-2 col-10 p-2 green-tx"><p class="h2 text-center">{% trans 'Контакты' %}</p></div>
+    </div>
+    <div class="d-flex green-bg px-0 justify-content-center">
+        <div class="col-xl-9 col-12 d-flex flex-xl-row flex-column">
+            <div class="col-xl-5 col-12 p-4 yellow-tx d-flex align-items-start justify-content-center flex-column">
+                <p class="border-bottom col-12">{% trans 'Адрес:' %}</p>
+                <div class="ps-4">
+                    <p>{% trans '61165, г. Харьков, ул. Космическая, 12' %}</p>
+                    <p>{% trans '8:00 - 17:00 (перерыв 12:00 - 13:00)' %}</p>
+                    <p>{% trans 'Приемная телефон / факс:' %}</p>
+                
+                <div>
+                    <a class="contact yellow-tx mb-2" style="text-decoration:none;" href="tel:+380577021361">+38 (057) 702 13 61</a>
+                </div>
+                    </div>
+                <br />
+                <p class="border-bottom col-12">{% trans 'Адрес отдела продаж:' %}</p>
+                <div class="ps-4">
+                    <p>{% trans '61165, г. Харьков, ул. Космическая, 12а (вход со двора)' %}</p>
+                    <p>{% trans 'Понедельник-пятница: 8:00 - 18:00 Суббота: 9:00 - 13.00' %}</p>
+                    <div class="d-flex flex-column">
+                        <a class="contact yellow-tx mb-3" style="text-decoration:none;" href="tel:+380577021361">+38 (057) 702-13-61</a>
+                        <a class="contact yellow-tx mb-3" style="text-decoration:none;" href="tel:+380577270717">+38 (057) 727-07-17</a>
+                        <a class="contact yellow-tx mb-3" style="text-decoration:none;" href="tel:+380577152828">+38 (057) 715-28-28</a>
+                    </div>
+                </div>
+                <p class="border-bottom col-12">E-mail:</p>
+                <div class="ps-4">
+                    <a class="contact yellow-tx" style="text-decoration:none;" href="mailto:info@zhilstroj-2.ua">info@zhilstroj-2.ua</a>
+                 </div>
+            </div>
+            <div class="col-xl-7 col-12">               
+                 <img src="{% static 'app/img/contact.webp' %}" class="d-block h-100 w-100" alt="...">          
+            </div>           
+        </div>
+    </div>
+    <div class="green-bg d-flex justify-content-center col-12">
+        <div id="map" style="width: 100%; height: 550px"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://kit.fontawesome.com/3ad61f7b57.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="{% static 'app/scripts/bootstrap.bundle.min.js' %}"></script>
+<script>
+    //On load
+    $(window).on('load', function () {
+        $('#loading').hide();
+        $("#header").addClass("sticky-xl-top");
+        AOS.init();
+    });  
+</script>
+<script>
+    DG.then(function() {
+        var map = DG.map('map', {
+            center: [50.014423, 36.22104],
+            zoom: 18,
+            zoomControl: false
+        });
+
+        DG.marker([50.014423, 36.22104]).addTo(map).bindPopup('ЖИТЛОБУД-2');
+    });
+</script>
+{% endblock %}
