@@ -389,6 +389,7 @@
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
             return new bootstrap.Popover(popoverTriggerEl)
         })
+        $(function () {
         window.addEventListener('message', function (message) {
             $('#iframeModalCompleN').prop('src', message.data)
             var Modal = new bootstrap.Modal(document.getElementById('frameModal'), {
@@ -396,6 +397,7 @@
             });
             console.log("here");
             Modal.show();
+            });
         });
         $(document).scroll(function () {
             var y = $(this).scrollTop();
