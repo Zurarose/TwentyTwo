@@ -404,16 +404,17 @@
             return new bootstrap.Popover(popoverTriggerEl)
         })
         $(function () {
-            if (typeof window.addEventListener != 'undefined') {
-                window.addEventListener('message', function (message) {
+            window.addEventListener('message', function (message) {
+                if (message.data) {
                     $('#iframeModalCompleN').prop('src', message.data)
                     var Modal = new bootstrap.Modal(document.getElementById('frameModal'), {
                         keyboard: false
                     });
                     console.log("here");
                     Modal.show();
-                });
-            }
+                }
+            });
+
         });
         $(document).scroll(function () {
             var y = $(this).scrollTop();
