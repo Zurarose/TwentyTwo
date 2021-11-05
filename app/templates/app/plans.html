@@ -12,12 +12,12 @@
                 src="https://chessgrid.developerit.systems/public/developers/5ecd1c2590de761738c029a3/apartmentComplex/6151c5e35f333e539505f646/layout/61593eeb5f333e5395b45dea?authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiI3Zjc4MGIzYy1iYzgwLTQ1YWMtOTkxMS01YjYyMjlkMTg5NzUiLCJpYXQiOjE2MzMzNTA4NzksImV4cCI6MTc5MTEzODg3OX0.4GXbFFq8RxxxogLwV4gYpzo2V4wS1kUGxj5PztQ_fpE">
         </iframe>
     </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header col-12 p-0" style="min-height:60px;">                 
                     <div class="d-flex justify-content-center col-2 p-0 border-end orange-bg border-yellow" style="height:100%;">
-                        <a class="m-1 logo d-flex align-items-center" href="{% url 'home' %}"><img style="width: 160px;" src="{% static 'app/img/cmprsd/22_logo_white.png' %}" class="img-fluid" alt="..."></a>
+                        <a class="m-1 logo d-flex align-items-center" href="{% url 'home' %}"><img style="width: 160px;" src="{% static 'app/img/22_logo_white.png' %}" class="img-fluid" alt="..."></a>
                     </div>
                     <div class="col-10 green-bg d-flex justify-content-end align-items-center" style="height:100%;">
                         <button type="button" class="btn-close btn-close-white me-5" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -29,7 +29,7 @@
                 <div class="modal-footer green-bg d-flex justify-content-center">
                      <div class="col-xl-10 col-md-11 col-12 px-xl-0 px-md-0 px-1 d-flex flex-row">
                         <div class="col-7 col-md-5 col-xl-5 d-flex flex-column justify-content-start">
-                            <a class="hiddenSize hiddenXL mt-1 mt-xl-0 mt-md-0 mb-1 d-flex justify-content-start" href="{% url 'home' %}"><img style="width: 180px; max-height:68px;" src="{% static 'app/img/sup_items/22_logo_light.png' %}" class="img-fluid" alt="..."></a>
+                            <a class="hiddenSize hiddenXL mt-1 mt-xl-0 mt-md-0 mb-1 d-flex justify-content-start" href="{% url 'home' %}"><img style="width: 180px; max-height:68px;" src="{% static 'app/img/22_logo_white.png' %}" class="img-fluid" alt="..."></a>
                             <a class="resp_text d-flex justify-content-start align-items-end m-0 h5 text-center" href="https://zhilstroj-2.ua/complexes/mfk22/" target="_blank">{% trans "© ОДО «ЖИЛСТРОЙ-2»" %}</a>
                         </div>              
                         <div class="col-5 col-md-7 col-xl-7 d-flex flex-column flex-md-row flex-xl-row justify-content-end">
@@ -47,6 +47,7 @@
 {% endblock %}
 
 {% block scripts %}
+<script src="{% static 'app/scripts/lazysizes.min.js' %}" async=""></script>
 <script src="https://kit.fontawesome.com/3ad61f7b57.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="{% static 'app/scripts/bootstrap.bundle.min.js' %}"></script>
@@ -62,7 +63,7 @@
     window.addEventListener('message', function (message) {
         console.log(message.data);
         $('#iframeModalCompleN').prop('src', message.data)
-        var Modal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+        var Modal = new bootstrap.Modal(document.getElementById('Modal'), {
             keyboard: false
         });
         Modal.show();
