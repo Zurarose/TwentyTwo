@@ -13,10 +13,10 @@
             <img src="{% static 'app/img/1.webp' %}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="3500">
-            <img data-src="{% static 'app/img/2.webp' %}" class="lazyload d-block w-100" alt="...">
+            <img src="{% static 'app/img/2.webp' %}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item" data-bs-interval="3500">
-            <img data-src="{% static 'app/img/visual_1.webp' %}" class="lazyload d-block w-100" alt="...">
+            <img src="{% static 'app/img/visual_1.webp' %}" class="d-block w-100" alt="...">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -28,9 +28,8 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-
 <div class="d-flex justify-content-center">
-    <div class="mx-0 yellow-bg">
+    <div class="mx-0 yellow-bg w-100">
         <div class="col-12 d-flex justify-content-center">
             <div id="about_compelx" class="col-10 p-2 green-tx mt-xl-5 mt-md-5 mt-3">
                 <p class="h2 text-center">{% trans 'Про комплекс' %}</p>
@@ -182,7 +181,7 @@
                 </a>
                 <a class="icon_info hideXordBorder addBtnBorder col-12 col-xl-4 col-md-4 green-tx border-1 border-green border-end p-3" tabindex="0" data-bs-trigger="hover" role="button" data-bs-toggle="popover" data-bs-placement="bottom" title="{% trans 'Moнoлитныe здания' %}" data-bs-content="{% trans 'Moнoлитныe здания — этo бecшoвныe бeтoнныe coopyжeния, кoтopыe cocтoят нe из oтдeльныx элeмeнтoв, a пpeдcтaвляют coбoй цeльнoлитyю кoнcтpyкцию. Такой подход обеспечивает прочность конструкции и её долговечность.' %}">
                     <span class="float-start text-center material-icons md-60 col-5">foundation</span>
-                    <span class="mt-2 float-start col-7">{% trans 'Монолитный<br /> каркас' %}</span>
+                    <span class="mt-2 float-start col-7">{% trans 'Монолитный<br />каркас' %}</span>
                 </a>
                 <a class="icon_info hideXordBorder addBtnBorder col-12 col-xl-4 col-md-4 green-tx border-1 border-green border-end p-3" tabindex="0" data-bs-trigger="hover" role="button" data-bs-toggle="popover" data-bs-placement="bottom" title="{% trans 'Газобетонные блоки' %}" data-bs-content="{% trans 'Основным свойством газобетона является то, что его пористая структура наделяет его высокими теплоизоляционными свойствами. Таким образом тепло в доме может сохраняться на долгое время.' %}">
                     <span class="float-start text-center material-icons md-60 col-5">view_compact</span>
@@ -196,17 +195,16 @@
         </div>
     </div>
 </div>
-
 <div class="green-bg d-flex justify-content-center">
     <div class="col-xl-9 col-12 d-flex flex-xl-row flex-column pt-0 pt-md-0 mt-xl-5">
         <div class="order-2 order-xl-1 col-xl-4 col-12 p-0 yellow-tx d-flex align-items-center" id="planningtx">
-            <p align="justify" class="px-4 py-4 py-md-4 py-xl-0 m-0 resp_text_mid  col-md-10 col-xl-12 col-11">
+            <p align="justify" class="px-4 py-4 py-md-4 py-xl-0 m-0 resp_text_mid  col-md-11 col-xl-12 col-11">
                 {% blocktranslate %}
                 Квартиры в комплексе запроектированы с седьмого по двадцать второй этажи. Ни на одном из этажей нет типовых решений. Потому чтобы выбрать свою идеальную квартиру, мы рекомендуем просмотреть планы всех этажей.
                 Просторные или наоборот небольшие квартиры с террасами, двухуровневые квартиры с лучшими видами, для большой семьи, для пары или для холостяка – в МФК “Twenty two” каждый найдет для себя идеальный вариант.
                 {% endblocktranslate %}
             </p>
-            <span class="remark orange-bg col-md-2 col-1" style="height: 100%;"></span>
+            <span class="remark orange-bg col-1" style="height: 100%;"></span>
         </div>
         <div class="order-1 order-xl-2 col-xl-8 col-12">
             <a class="pop">
@@ -217,22 +215,22 @@
 </div>
 
 <div class="green-bg d-flex justify-content-center py-xl-5 py-md-0 py-0 border-xl-none border-bottom border-yellow hideBorderXL">
-    <div class="col-xl-9 col-12 d-flex flex-xl-row flex-column">        
+    <div class="col-xl-9 col-12 d-flex flex-xl-row flex-column">
         <div class="col-xl-6 col-12">
             <a class="pop">
                 <img data-src="{% static 'app/img/DVOR.webp' %}" class="lazyload border-end border-yellow px-0 px-md-0 px-xl-4 d-block w-100" alt="...">
             </a>
         </div>
         <div class="col-xl-6 col-12 p-0 yellow-tx d-flex align-items-center" id="planningtx2">
-            <span class="remark orange-bg col-md-2 col-1" style="height: 100%;"></span>
-            <p align="justify" class="px-4 py-4 py-md-4 py-xl-0 m-0 resp_text_mid  col-md-10 col-xl-12 col-11">
+            <span class="remark orange-bg col-1" style="height: 100%;"></span>
+            <p align="justify" class="px-4 py-4 py-md-4 py-xl-0 m-0 resp_text_mid  col-md-11 col-xl-12 col-11">
                 Квартиры в комплексе запроектированы с седьмого по двадцать второй этажи. Ни на одном из этажей нет типовых решений. Потому чтобы выбрать свою идеальную квартиру, мы рекомендуем просмотреть планы всех этажей.
                 Просторные или наоборот небольшие квартиры с террасами, двухуровневые квартиры с лучшими видами, для большой семьи, для пары или для холостяка – в МФК “Twenty two” каждый найдет для себя идеальный вариант.
             </p>
         </div>
-    </div>    
+    </div>
 </div>
-<div class="col-12 d-flex justify-content-center green-bg" style="border:none;">
+<div class="px-xl-4 col-12 d-flex justify-content-center green-bg" style="border: none;">
     <div class="col-xl-9 col-12 d-flex flex-xl-row flex-wrap my-4 ">
         <a class="pop p-2 col-xl-3 col-md-6 col-12">
             <img data-src="{% static 'app/img/3_4.webp' %}" class="lazyload px-0 d-block w-100" alt="...">
@@ -247,24 +245,22 @@
             <img data-src="{% static 'app/img/3_8.webp' %}" class="lazyload px-0 d-block w-100" alt="...">
         </a>
     </div>
-    </div>
-
-<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl" data-dismiss="modal">
-    <div class="modal-content">
-        <div class="modal-header col-12 p-0">
-            <div class="col-12 green-bg border-yellow d-flex justify-content-end align-items-center" style="height: 100%; min-height:60px;">
-                <button type="button" class="btn-close btn-close-white me-5" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-        </div>
-      <div class="modal-body p-0">      
-        <img src="#" class="imagepreview" style="width: 100%;" >
-      </div>       
-    </div>
-  </div>
 </div>
 
-
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" data-dismiss="modal">
+        <div class="modal-content">
+            <div class="modal-header col-12 p-0">
+                <div class="col-12 green-bg border-yellow d-flex justify-content-end align-items-center" style="height: 100%; min-height: 60px;">
+                    <button type="button" class="btn-close btn-close-white me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="modal-body p-0">
+                <img src="#" class="imagepreview" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+</div>
 <div class="">
     <div class="shadow-lg mx-0 yellow-bg">
         <div class="col-12 d-flex justify-content-center">
@@ -278,7 +274,6 @@
                     src="https://chessgrid.developerit.systems/public/developers/5ecd1c2590de761738c029a3/apartmentComplex/6151c5e35f333e539505f646/layout/61593eeb5f333e5395b45dea?authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiI3Zjc4MGIzYy1iYzgwLTQ1YWMtOTkxMS01YjYyMjlkMTg5NzUiLCJpYXQiOjE2MzMzNTA4NzksImV4cCI6MTc5MTEzODg3OX0.4GXbFFq8RxxxogLwV4gYpzo2V4wS1kUGxj5PztQ_fpE"></iframe>
             </div>
         </div>
-
         <div class="modal fade" id="frameModal" tabindex="-1" aria-labelledby="frameModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
@@ -312,32 +307,35 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 d-flex justify-content-center">
-            <div class="col-xl-7 col-md-10 col-11 white-tx green-bg shadow-lg p-4 rounded-3" data-aos="fade-down" data-aos-duration="1000">
-                <p class="col-12 p-0 d-flex justify-content-center yellow-tx h4" align="center">{% trans 'Оставьте свои данные. Наш менеджер позвонит и поможет подобрать квартиры под ваш запрос' %}</p>
-                <form class="pt-4">
-                    <div class="mb-3 my-4 border-bottom col-12">
-                        <label for="InputName" class="form-label yellow-tx">{% trans 'Ваше имя' %}</label>
-                        <input type="text" required class="contact_info yellow-tx form-control border-0 px-1 green-bg col-12" id="InputName">
-                    </div>
-                    <div class="mb-3 my-4 border-bottom col-12">
-                        <label for="inputPhone" class="form-label yellow-tx">{% trans 'Номер телефона' %}</label>
-                        <input type="text" class="contact_info yellow-tx form-control border-0 px-1 green-bg col-12" id="phone">
-                    </div>
-                    <div class="col-12 pt-4 d-flex justify-content-end">
-                        <input type="submit" value="{% trans 'ОТПРАВИТЬ' %}" class="h4 send">
-                    </div>
-                </form>
+        <div class="d-flex justify-content-center">
+            <div class="card border-0 col-11 col-xl-6">
+                <div class="row g-0">                
+                        <div class="card-body green-bg h-100">
+                            <p class="col-12 p-0 d-flex justify-content-center yellow-tx h4" align="center">{% trans 'Оставьте свои данные. Наш менеджер позвонит и поможет подобрать квартиры под ваш запрос' %}</p>
+                            <form class="pt-4">
+                                <div class="mb-3 mb-4 border-bottom col-12">
+                                    <label for="InputName" class="form-label yellow-tx">{% trans 'Ваше имя' %}</label>
+                                    <input type="text" required class="contact_info yellow-tx form-control border-0 px-1 green-bg col-12" id="InputName">
+                                </div>
+                                <div class="mb-3 my-4 border-bottom col-12">
+                                    <label for="inputPhone" class="form-label yellow-tx">{% trans 'Номер телефона' %}</label>
+                                    <input type="text" class="contact_info yellow-tx form-control border-0 px-1 green-bg col-12" id="phone">
+                                </div>
+                                <div class="col-12 pt-4 d-flex justify-content-end">
+                                    <input type="submit" value="{% trans 'ОТПРАВИТЬ' %}" class="h4 send">
+                                </div>
+                            </form>
+                        </div>
+                </div>
             </div>
         </div>
-
         <div class="col-12 d-flex justify-content-center">
             <div id="location" class="mt-xl-5 mt-md-5 mt-3 col-10 p-2 green-tx">
                 <p class="h2 text-center">{% trans 'Расположение' %}</p>
             </div>
         </div>
         <div class="col-12 d-flex justify-content-center">
-            <div class="col-xl-10 col-12 shadow-lg d-flex flex-xl-row flex-md-row flex-column mb-xl-5 mb-md-5 mx-0" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">
+            <div class="col-xl-9 col-xxl-9 col-12 shadow-lg d-flex flex-xl-row flex-md-row flex-column mb-xl-5 mb-md-5 mx-0" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">
                 <div class="col-4 shadow-lg green-bg" id="markers" style="width: 25%;">
                     <a id="market" class="p-3 p-xl-0 p-md-0 marks col-12 d-inline-block d-md-flex d-xl-flex justify-content-center align-items-center border-bottom" style="height: 10%">{% trans 'Магазины' %}</a>
                     <a id="parks" class="p-3 p-xl-0 p-md-0 marks col-12 d-inline-block d-md-flex d-xl-flex justify-content-center align-items-center border-bottom" style="height: 10%">{% trans 'Парки' %}</a>
@@ -387,6 +385,7 @@
         const mediaQueryXS = window.matchMedia('(max-width: 767px)')
         if (mediaQueryXS.matches) {
             $(".icon_info").attr("data-bs-placement", "top");
+            $("#frame").attr("src", "https://chessgrid.developerit.systems/public/developers/5ecd1c2590de761738c029a3/apartmentComplex/6151c5e35f333e539505f646/layout/61879be75f333e539575c9ae?authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlLZXkiOiI3Zjc4MGIzYy1iYzgwLTQ1YWMtOTkxMS01YjYyMjlkMTg5NzUiLCJpYXQiOjE2MzYyNzczMjIsImV4cCI6MTc5NDA2NTMyMn0.FUz5UgYB8fZADubhSf4b4RLqcnctbBobdBlj4RQiqUw");
         }
     });
 
@@ -397,7 +396,7 @@
         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
             return new bootstrap.Popover(popoverTriggerEl)
-        })       
+        })
         $(document).scroll(function () {
             var y = $(this).scrollTop();
             if (y > 700) {
@@ -413,12 +412,12 @@
         });
         $(function () {
             window.addEventListener('message', function (message) {
-                if (message.data) {                  
+                if (message.data) {
                     $('#iframeModalCompleN').prop('src', message.data)
                     var Modal = new bootstrap.Modal(document.getElementById('frameModal'), {
                         keyboard: false
                     });
-                    Modal.show();                 
+                    Modal.show();
                 }
             });
         });

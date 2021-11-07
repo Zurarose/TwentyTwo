@@ -291,14 +291,15 @@
             border: 1px solid;
             border-color: rgb(2, 68, 58);
         }
-
-
+       
         /*responsive*/
         @media screen and (min-width: 768px) and (max-width: 1199px) {
             .hidden {
                 visibility: hidden;
             }
-
+            .modal-xl {
+                max-width: 95% !important;
+            }
             .resp_text {
                 font-size: 0.9em;
             }
@@ -347,6 +348,14 @@
             }
             .hideBorderXL {
                 border:none !important;
+            }
+        }
+        @media screen and (min-width: 2000px) {
+            #frame {
+                height:1000px !important;
+            }
+            .sizedtext {
+                font-size: 1.1rem !important;
             }
         }
 
@@ -402,7 +411,10 @@
             }
             .memu-items {
                 text-align: center;
-            }       
+            }
+            #frame {
+                height: 700px !important;
+            }
         }
     </style>
 </head>
@@ -452,7 +464,7 @@
                             <a href="https://www.youtube.com/channel/UC4_WUC7so0BlakWziTWD9ZA" target="_blank" class=" d-inline-block social-link social-youtube" style="font-size: 1.3rem;"><i class="fab fa-youtube"></i></a>
                         </div>
                         <div class="hidden align-items-center d-flex justify-content-center " style="height: 50%;">
-                            <a href="tel:+380577021361" class="d-inline-block" style="font-size: 0.95rem">057 702 13 61</a>
+                            <a  href="tel:+380577021361" class="sizedtext d-inline-block" style="font-size: 0.95rem">057 702 13 61</a>
                         </div>
                     </div>
                     <div class="col-3 col-xl-1 col-md-2 p-0 orange-bg">
@@ -525,13 +537,13 @@
                   {% csrf_token %}
                   <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
                   <input name="language" type="hidden" value="uk" />
-                  <button type="submit" value="uk" class="lang p-0 m-0 btn btn-link d-flex justify-content-end mt-3">UA</button>
-                </form>
+                  <button type="submit" value="uk" class="pb-2 border-bottom lang p-0 m-0 btn btn-link d-flex justify-content-end mt-3">UA</button>
+                </form>                
                 <form action="{% url 'set_language' %}" class="hiddenXS" method="post">
                   {% csrf_token %}
                   <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
                   <input name="language" type="hidden" value="ru" />
-                  <button type="submit" value="ru" class="lang p-0 m-0 btn btn-link d-flex justify-content-end mt-3">RU</button>
+                  <button type="submit" value="ru" class="pt-2 lang p-0 m-0 btn btn-link d-flex justify-content-end">RU</button>
                 </form>
             </div>
         </div>

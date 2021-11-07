@@ -80,6 +80,7 @@
     <Content Include="app\static\app\img\3_8.webp" />
     <Content Include="app\static\app\img\contact.webp" />
     <Content Include="app\static\app\img\DVOR.webp" />
+    <Content Include="app\static\app\img\logo_contact.webp" />
     <Content Include="app\static\app\img\visual_1.webp" />
     <Content Include="app\static\app\img\visual_2.webp" />
     <Content Include="app\static\app\img\visual_3.webp" />
