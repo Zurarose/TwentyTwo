@@ -537,7 +537,7 @@
                   {% csrf_token %}
                   <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
                   <input name="language" type="hidden" value="uk" />
-                  <button type="submit" value="uk" class="pb-2 border-bottom lang p-0 m-0 btn btn-link d-flex justify-content-end mt-3">UA</button>
+                  <button type="submit" value="uk" class="pb-2 border-bottom rounded-0 lang p-0 m-0 btn btn-link d-flex justify-content-end mt-3">UA</button>
                 </form>                
                 <form action="{% url 'set_language' %}" class="hiddenXS" method="post">
                   {% csrf_token %}
