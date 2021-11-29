@@ -503,7 +503,12 @@
                         </div>
                     </div>
                 </div>
+            <div class="alert col-12 alert-success m-0 alert-dismissible fade"  role="alert" style="position:absolute">
+            {% trans 'Благодарим за обращение. Наш менеджер перезвонит вам!' %}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
         </nav>
+        
         {% block content %}
         {% endblock %}
     </div>

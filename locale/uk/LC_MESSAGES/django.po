@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-08 11:02+0200\n"
+"POT-Creation-Date: 2021-11-29 15:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,8 +21,8 @@ msgstr ""
 "100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
 "(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
-#: .\app\templates\app\contacts.html:7 .\app\templates\app\layout.html:485
-#: .\app\templates\app\layout.html:522
+#: .\app\templates\app\contacts.html:7 .\app\templates\app\layout.html:482
+#: .\app\templates\app\layout.html:523
 msgid "Контакты"
 msgstr "Контакти"
 
@@ -435,9 +435,20 @@ msgid ""
 "вечерок, и лучшие виды на рассветы и закаты. Это место, куда вы можете "
 "пригласить друзей, или побыть один на один с городом.\n"
 "                "
-msgstr 
+msgstr ""
 "\n"
-"Квартири в комплексі запроектовані з сьомого до двадцяти другого поверху. На жодному з поверхів немає типових рішень. Тому, щоб обрати свою ідеальну квартиру, ми рекомендуємо переглянути плани всіх поверхів. Просторі або навпаки невеликі квартири з терасами або дворівневі, для великої родини, для пари або для холостяка – в МФК Twenty two кожен знайде для себе ідеальний варіант.<br /><br /> Панорамне засклення в кожній із квартир забезпечить найкращі види на Харків. Два верхні поверхи займають дворівневі квартири з панорамою усієї центральної частини першої столиці. У квартирах комплексу не запроектовані лоджії, але ви можете вибрати варіант з терасою. Власна тераса в квартирі - це і шезлонги влітку, і місце для барбекю-вечірок, і найкращі види на світанки та заходи сонця. Це місце, куди ви можете запросити друзів, або побути наодинці з містом."
+"Квартири в комплексі запроектовані з сьомого до двадцяти другого поверху. На "
+"жодному з поверхів немає типових рішень. Тому, щоб обрати свою ідеальну "
+"квартиру, ми рекомендуємо переглянути плани всіх поверхів. Просторі або "
+"навпаки невеликі квартири з терасами або дворівневі, для великої родини, для "
+"пари або для холостяка – в МФК Twenty two кожен знайде для себе ідеальний "
+"варіант.<br /><br /> Панорамне засклення в кожній із квартир забезпечить "
+"найкращі види на Харків. Два верхні поверхи займають дворівневі квартири з "
+"панорамою усієї центральної частини першої столиці. У квартирах комплексу не "
+"запроектовані лоджії, але ви можете вибрати варіант з терасою. Власна тераса "
+"в квартирі - це і шезлонги влітку, і місце для барбекю-вечірок, і найкращі "
+"види на світанки та заходи сонця. Це місце, куди ви можете запросити друзів, "
+"або побути наодинці з містом."
 
 #: .\app\templates\app\index.html:228
 msgid ""
@@ -466,7 +477,7 @@ msgstr ""
 msgid "Подобрать квартиру"
 msgstr "Підібрати квартиру"
 
-#: .\app\templates\app\index.html:300 .\app\templates\app\layout.html:517
+#: .\app\templates\app\index.html:300 .\app\templates\app\layout.html:518
 #: .\app\templates\app\plans.html:33
 msgid "© ОДО «ЖИЛСТРОЙ-2»"
 msgstr "© ОДО «ЖИТЛОБУД-2»"
@@ -483,84 +494,88 @@ msgstr ""
 "Залиште свої дані. Наш менеджер зателефонує та допоможе підібрати квартири "
 "під ваш запит"
 
-#: .\app\templates\app\index.html:320
+#: .\app\templates\app\index.html:321
 msgid "Ваше имя"
 msgstr "Ваше ім'я"
 
-#: .\app\templates\app\index.html:324
+#: .\app\templates\app\index.html:325
 msgid "Номер телефона"
 msgstr "Номер телефону"
 
-#: .\app\templates\app\index.html:328
+#: .\app\templates\app\index.html:329
 msgid "ОТПРАВИТЬ"
 msgstr "ВІДПРАВИТИ"
 
-#: .\app\templates\app\index.html:337
+#: .\app\templates\app\index.html:338
 msgid "Расположение"
 msgstr "Розташування"
 
-#: .\app\templates\app\index.html:343
+#: .\app\templates\app\index.html:344
 msgid "Магазины"
 msgstr "Магазини"
 
-#: .\app\templates\app\index.html:344
+#: .\app\templates\app\index.html:345
 msgid "Парки"
 msgstr "Парки"
 
-#: .\app\templates\app\index.html:345
+#: .\app\templates\app\index.html:346
 msgid "Рестораны"
 msgstr "Ресторани"
 
-#: .\app\templates\app\index.html:346
+#: .\app\templates\app\index.html:347
 msgid "Здоровье"
 msgstr "Здоров'я"
 
-#: .\app\templates\app\index.html:347
+#: .\app\templates\app\index.html:348
 msgid "Транспортные сети"
 msgstr "Транспортні мережі"
 
-#: .\app\templates\app\index.html:348
+#: .\app\templates\app\index.html:349
 msgid "Учебные заведения"
 msgstr "Навчальні заклади"
 
-#: .\app\templates\app\layout.html:439
+#: .\app\templates\app\layout.html:436
 msgid "ЖИЛСТРОЙ-2"
 msgstr "ЖИТЛОБУД-2"
 
-#: .\app\templates\app\layout.html:452
+#: .\app\templates\app\layout.html:449
 msgid "ПРО КОМПЛЕКС"
 msgstr "ПРО КОМПЛЕКС"
 
-#: .\app\templates\app\layout.html:453
+#: .\app\templates\app\layout.html:450
 msgid "КВАРТИРЫ"
 msgstr "КВАРТИРИ"
 
-#: .\app\templates\app\layout.html:454
+#: .\app\templates\app\layout.html:451
 msgid "РАСПОЛОЖЕНИЕ"
 msgstr "РОЗМІЩЕННЯ"
 
-#: .\app\templates\app\layout.html:484 .\app\templates\app\layout.html:521
+#: .\app\templates\app\layout.html:481 .\app\templates\app\layout.html:522
 #: .\app\templates\app\news.html:8
 msgid "Новости"
 msgstr "Новини"
 
-#: .\app\templates\app\layout.html:486
+#: .\app\templates\app\layout.html:483
 msgid "Планировка"
 msgstr "Планування"
 
-#: .\app\templates\app\layout.html:487 .\app\templates\app\layout.html:523
+#: .\app\templates\app\layout.html:484 .\app\templates\app\layout.html:524
 msgid "О компании"
 msgstr "Про компанію"
 
-#: .\app\templates\app\layout.html:488
+#: .\app\templates\app\layout.html:485
 msgid "Коммерческая недвижимость"
 msgstr "Комерційна нерухомість"
 
-#: .\app\templates\app\layout.html:526
+#: .\app\templates\app\layout.html:507
+msgid "Благодарим за обращение. Наш менеджер перезвонит вам!"
+msgstr "Дякуємо за звернення. Наш менеджер передзвонить вам!"
+
+#: .\app\templates\app\layout.html:527
 msgid "г. Харьков, ул. Космическая, 12"
 msgstr "м. Харків, вул. Космічна, 12"
 
-#: .\app\templates\app\layout.html:527
+#: .\app\templates\app\layout.html:528
 msgid "Время работы с 9:00 до 18:00"
 msgstr "Час роботи з 9:00 до 18:00"
 
